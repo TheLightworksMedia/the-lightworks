@@ -1,11 +1,116 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="The Lightworks | Portfolio">
+  <main class="gallery-container">
+    <header class="site-header">
+      <h1>The Lightworks</h1>
+      <p>Architectural & Real Estate Media</p>
+    </header>
+
+    <div class="grid">
+      <a href="#" class="grid-item">
+        <img src="/images/DSC08537-HDR-Export.jpg" alt="Project 1" />
+        <div class="overlay">
+          <span>Project Title One</span>
+        </div>
+      </a>
+
+      <a href="#" class="grid-item">
+        <img src="/images/DSC08587-HDR-Export.jpg" alt="Project 2" />
+        <div class="overlay">
+          <span>Project Title Two</span>
+        </div>
+      </a>
+
+      </div>
+  </main>
 </Layout>
+
+<style>
+  /* Minimalist, classy dark/light styling */
+  body {
+    background-color: #0f0f0f;
+    color: #f3f3f3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .site-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+  }
+
+  .site-header p {
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  /* Clean minimal grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .grid-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #1a1a1a;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .grid-item:hover img {
+    transform: scale(1.03);
+  }
+
+  /* Subtle dark overlay that reveals title on hover */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .grid-item:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay span {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+</style>
