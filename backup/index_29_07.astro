@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Lightworks | Editorial Portfolio">
+  <div class="page-wrapper">
+    <header class="site-header">
+      <h1>The Lightworks</h1>
+      <p>Architectural & Real Estate Media</p>
+    </header>
+
+    <main class="portfolio-container">
+      <section class="portfolio-item landscape">
+        <div class="image-wrapper">
+          <img src="/images/DSC08582-HDR-Export.jpg" alt="Architectural Project One" />
+        </div>
+        <div class="caption">
+          <h2>Project One</h2>
+          <span class="category">Architectural</span>
+        </div>
+      </section>
+
+      <section class="portfolio-item vertical-layout">
+        <div class="image-wrapper">
+          <img src="/images/DSC08975-HDR-Export.jpg" alt="Real Estate Project Two" />
+        </div>
+        <div class="content-side">
+          <h2>Project Two</h2>
+          <p class="description">
+            A minimalist study in light, space, and structure, crafted with a high-end editorial vision.
+          </p>
+          <span class="category">Real Estate</span>
+        </div>
+      </section>
+    </main>
+  </div>
+</Layout>
+
+<style>
+  /* Import Cormorant Garamond font from Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+  /* Global luxury color palette */
+  :root {
+    --bg-cream: #F9F6F0;
+    --text-mahogany: #241A16;
+    --muted-mahogany: #63524A;
+  }
+
+  /* Force the background and font color globally */
+  html, body {
+    background-color: var(--bg-cream) !important;
+    color: var(--text-mahogany) !important;
+    font-family: 'Cormorant Garamond', serif !important;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05em;
+  }
+
+  .page-wrapper {
+    background-color: var(--bg-cream);
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .site-header {
+    text-align: center;
+    padding: 6rem 2rem 4rem 2rem;
+  }
+
+  .site-header h1 {
+    font-size: 2.8rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    color: var(--text-mahogany);
+  }
+
+  .site-header p {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--muted-mahogany);
+    letter-spacing: 0.2em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .portfolio-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 4rem 6rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  /* Landscape: Full Width without heavy cropping */
+  .portfolio-item.landscape {
+    width: 100%;
+  }
+
+  .portfolio-item.landscape .image-wrapper {
+    width: 100%;
+    background: transparent;
+  }
+
+  .portfolio-item.landscape img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .portfolio-item.landscape .caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid rgba(36, 26, 22, 0.15);
+    padding-bottom: 1rem;
+  }
+
+  /* Vertical: Image side-by-side with text room */
+  .portfolio-item.vertical-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .portfolio-item.vertical-layout .image-wrapper {
+    width: 100%;
+  }
+
+  .portfolio-item.vertical-layout img {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    display: block;
+    object-fit: contain;
+  }
+
+  .content-side h2 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.1em;
+    color: var(--text-mahogany);
+  }
+
+  .content-side .description {
+    font-size: 1.25rem;
+    color: var(--muted-mahogany);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .category {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted-mahogany);
+  }
+
+  /* Responsive adjustment for mobile screens */
+  @media (max-width: 900px) {
+	.site-header h1 {
+      font-size: 1.4rem; /* Roughly 50% smaller for mobile */
+	  letter-spacing: 0.35em;
+    }
+	.site-header p {
+      font-size: 0.6rem; /* Roughly 50% smaller for mobile */
+    }
+    .content-side .description {
+      font-size: 0.7rem; /* Adjusted for clean mobile reading */
+    }
+    .portfolio-item.vertical-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .portfolio-container {
+      padding: 0 1.5rem 4rem 1.5rem;
+      gap: 5rem;
+    }
+  }
+</style>
