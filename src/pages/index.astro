@@ -6,158 +6,172 @@ import Layout from '../layouts/Layout.astro';
   <div class="page-wrapper">
     
     <header class="site-nav-header">
-      <div class="nav-brand">The Lightworks</div>
+      <div class="nav-brand">
+        <span class="brand-title">THE LIGHTWORKS</span>
+        <span class="brand-subtitle">ARCHITECTURAL & REAL ESTATE MEDIA</span>
+      </div>
       <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#video">VIDEO</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#contact">CONTACT</a>
       </nav>
     </header>
 
-    <section class="hero-section" id="home">
-      <h1>The Lightworks</h1>
-      <p class="subtitle">Architectural & Real Estate Media</p>
-    </section>
-
-    <div id="portfolio">
-      <section class="image-break landscape first-photo">
-        <div class="image-wrapper">
-          <img src="/images/DSC08582-HDR-Export.jpg" alt="The Pavilion Residence Exterior" />
-        </div>
-        <div class="caption-centered">
-          <span class="caption-title">The Pavilion Residence</span>
-          <span class="caption-category">Exterior Architecture</span>
-        </div>
-      </section>
-
-      <section class="text-section" id="about">
-        <div class="text-container centered">
-          <h2>A Study in Light</h2>
-          <p class="body-text">
-            Founded on the principle that exceptional architecture deserves an equally uncompromising visual expression, The Lightworks operates at the intersection of fine art photography and high-end real estate media. We treat every structure as a sculpture of light and shadow, delivering a timeless editorial standard.
-          </p>
-        </div>
-      </section>
-
-      <section class="image-break vertical-layout">
-        <div class="image-wrapper">
-          <img src="/images/DSC08975-HDR-Export.jpg" alt="Minimalist Interior Volume" />
-        </div>
-        <div class="content-side">
-          <h2>Monochrome Volume</h2>
-          <p class="body-text">
-            A minimalist study in negative space and architectural structure, captured through a high-end editorial lens to reveal the precise craft of modern interior design.
-          </p>
-          <span class="category-tag">Interior & Spatial Design</span>
-        </div>
-      </section>
-
-      <section class="image-break landscape">
-        <div class="image-wrapper">
-          <img src="/images/DSC08537-HDR-Export.jpg" alt="Structural Light Study" />
-        </div>
-        <div class="caption-centered">
-          <span class="caption-title">The Concrete Horizon</span>
-          <span class="caption-category">Structural Architecture</span>
-        </div>
-      </section>
-
-      <section class="image-break double-spread">
-        <div class="image-wrapper">
-          <img src="/images/DSC08785-HDR-Export.jpg" alt="Architectural Detail Shot Left" />
-        </div>
-        <div class="image-wrapper">
-          <img src="/images/DSC08930-HDR-Export.jpg" alt="Architectural Detail Shot Right" />
-        </div>
-      </section>
-      <div class="caption-centered double-caption">
-        <span class="caption-title">Material & Spatial Studies</span>
-        <span class="caption-category">Detail Curation</span>
+    <section class="first-photo-fullwidth" id="home">
+      <div class="fullwidth-image-wrapper hero-slider">
+        <img 
+          class="active" 
+          src="/images/DSC08582-HDR-Export.jpg" 
+          alt="The Woodland Spa Estate" 
+        />
+        <img 
+          src="/images/DSC08537-HDR-Export.jpg" 
+          alt="The Concrete Horizon" 
+        />
+        <img 
+          src="/images/DSC08642-HDR-Export.jpg" 
+          alt="Spatial Fluidity" 
+        />
       </div>
 
-      <section class="image-break landscape">
-        <div class="image-wrapper">
-          <img src="/images/DSC08642-HDR-Export.jpg" alt="Open Living Space Geometry" />
-        </div>
-        <div class="caption-centered">
-          <span class="caption-title">Spatial Fluidity</span>
-          <span class="caption-category">Interior Horizon</span>
-        </div>
-      </section>
-    </div>
+      <div class="caption-centered">
+          &nbsp;
+      </div>
+    </section>
 
-    <section class="text-section bordered" id="services">
+    <section class="image-break vertical-layout" id="about">
+      <div class="image-wrapper">
+        <img src="/images/DSC08975-HDR-Export.jpg" alt="Minimalist Interior Volume" />
+      </div>
+      <div class="content-side">
+        <h2>About</h2>
+        <p class="body-text">
+          We are dedicated to creating exceptional, editorial-style architectural imagery and real estate media. Working closely with our clients, we tailor every capture to align with the unique vision and character of the property.
+        </p>
+        <p class="body-text">
+          Our approach is centered on natural light—how it enters, interacts with, and elevates spatial design. From high-resolution photography to immersive videography, we provide comprehensive media solutions tailored to your complete project needs.
+        </p>
+      </div>
+
+      <div class="full-width-divider"></div>
+    </section>
+
+    <section class="video-break" id="video">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/videos/architectural-reel.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
       <div class="text-container centered">
-        <h2>Curated Services</h2>
-        <p class="subtitle italic">Meticulous documentation for the built environment</p>
+        <h2>Services</h2>
+        <p class="subtitle italic">The Lightworks delivers premium property marketing tailored for estate agents, developers, interior designers, and private clients. We present every space with clarity and style, creating an engaging digital presence that elevates its true value.'</p>
       </div>
-      
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Architectural</h3>
-          <p class="body-text small">Meticulously composed visual documentation for architects, emphasizing geometry, materials, and spatial atmosphere.</p>
+
+      <div class="services-grid-2x3">
+        <div class="service-tile">
+          <img src="/images/DSC08582-HDR-Export.jpg" alt="Architectural Photography" />
+          <div class="tile-overlay">
+            <h3>Photography</h3>
+            <p class="tile-description">Meticulously composed stills emphasizing texture, spatial flow, and natural daylight.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <h3>Real Estate</h3>
-          <p class="body-text small">High-end editorial imagery tailored for luxury properties, boutique developers, and interior designers.</p>
+
+        <div class="service-tile">
+          <img src="/images/DSC08537-HDR-Export.jpg" alt="Architectural Videography" />
+          <div class="tile-overlay">
+            <h3>Videography</h3>
+            <p class="tile-description">Cinematic walkthroughs highlighting the true atmosphere and flow of luxury spaces.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <h3>Motion</h3>
-          <p class="body-text small">Sophisticated cinematic video designed to capture the true fluidity and ambiance of high-end architectural spaces.</p>
+
+        <div class="service-tile">
+          <img src="/images/DSC08642-HDR-Export.jpg" alt="Drone Media" />
+          <div class="tile-overlay">
+            <h3>Drone</h3>
+            <p class="tile-description">Elevated aerial views showcasing the property layout and surrounding landscape context.</p>
+          </div>
+        </div>
+
+        <div class="service-tile">
+          <img src="/images/DSC08785-HDR-Export.jpg" alt="Floorplans" />
+          <div class="tile-overlay">
+            <h3>Floorplans</h3>
+            <p class="tile-description">Precise, professional 2D and 3D schematics mapping accurate spatial dimensions.</p>
+          </div>
+        </div>
+
+        <div class="service-tile">
+          <img src="/images/DSC08930-HDR-Export.jpg" alt="360 Tours" />
+          <div class="tile-overlay">
+            <h3>360 Tours</h3>
+            <p class="tile-description">Interactive digital environments allowing seamless remote exploration of the property.</p>
+          </div>
+        </div>
+
+        <div class="service-tile">
+          <img src="/images/DSC08975-HDR-Export.jpg" alt="Social Media Content" />
+          <div class="tile-overlay">
+            <h3>Social Media</h3>
+            <p class="tile-description">Engaging, short-form visual content optimized for digital marketing and high-end reach.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="portfolio-continuation">
-      <section class="image-break vertical-layout reverse">
-        <div class="image-wrapper">
-          <img src="/images/DSC08587-HDR-Export.jpg" alt="Urban Luxury Living Vertical" />
-        </div>
-        <div class="content-side">
-          <h2>Penthouse Proportion</h2>
-          <p class="body-text">
-            Balancing natural daylight with structural integrity, this composition emphasizes height, luxury texture, and spatial clarity for high-end portfolio curation.
-          </p>
-          <span class="category-tag">Luxury Editorial</span>
-        </div>
-      </section>
+    <section class="portfolio-carousel-section" id="portfolio">
+      <div class="text-container centered">
+        <h2>Portfolio</h2>
+        <p class="subtitle italic">Selected architectural and spatial works</p>
+      </div>
 
-      <section class="image-break landscape">
-        <div class="image-wrapper">
-          <img src="/images/DSC08763-HDR-Export.jpg" alt="Bright Spatial Photography" />
+      <div class="carousel-container">
+        <button class="carousel-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="/images/DSC08587-HDR-Export.jpg" alt="Penthouse Proportion" />
+              <div class="carousel-caption">
+                <span class="caption-title">Penthouse Proportion</span>
+                <span class="caption-category">Luxury Editorial</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="/images/DSC08763-HDR-Export.jpg" alt="Diffused Light" />
+              <div class="carousel-caption">
+                <span class="caption-title">Diffused Light</span>
+                <span class="caption-category">Luminous Interiors</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="/images/DSC08868-HDR-Export.jpg" alt="Textural Harmony" />
+              <div class="carousel-caption">
+                <span class="caption-title">Textural Harmony</span>
+                <span class="caption-category">Residential Curation</span>
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img src="/images/DSC08990-HDR-Export.jpg" alt="Evening Atmosphere" />
+              <div class="carousel-caption">
+                <span class="caption-title">Evening Atmosphere</span>
+                <span class="caption-category">Twilight Ambiance</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="caption-centered">
-          <span class="caption-title">Diffused Light</span>
-          <span class="caption-category">Luminous Interiors</span>
-        </div>
-      </section>
-
-      <section class="image-break landscape space-top">
-        <div class="image-wrapper">
-          <img src="/images/DSC08868-HDR-Export.jpg" alt="Interior Geometry and Texture" />
-        </div>
-        <div class="caption-centered">
-          <span class="caption-title">Textural Harmony</span>
-          <span class="caption-category">Residential Curation</span>
-        </div>
-      </section>
-
-      <section class="image-break landscape space-top">
-        <div class="image-wrapper">
-          <img src="/images/DSC08990-HDR-Export.jpg" alt="Twilight Architecture Exterior" />
-        </div>
-        <div class="caption-centered">
-          <span class="caption-title">Evening Atmosphere</span>
-          <span class="caption-category">Twilight Ambiance</span>
-        </div>
-      </section>
-    </div>
+        <button class="carousel-arrow next-arrow" aria-label="Next slide">&#10095;</button>
+      </div>
+    </section>
 
     <footer class="footer-section" id="contact">
       <div class="text-container centered">
-        <h2>Inquiries</h2>
+        <h2>Enquiries</h2>
         <p class="subtitle italic">For commissioning and collaborative rates</p>
         
         <div class="contact-details">
@@ -186,9 +200,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* Import Cormorant Garamond font from Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
-
   :root {
     --bg-cream: #F9F6F0;
     --text-mahogany: #241A16;
@@ -210,13 +221,42 @@ import Layout from '../layouts/Layout.astro';
     -webkit-font-smoothing: antialiased;
   }
 
-  .page-wrapper {
-    background-color: var(--bg-cream);
-    min-height: 100vh;
+  .full-width-divider {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--border-mahogany);
     width: 100%;
+    margin-top: 2rem;
   }
 
-  /* Fixed Navigation Header - Stays pinned at top */
+  /* Cinematic Video Break */
+  /* Full-bleed section outside of standard page constraints */
+  .video-break {
+    width: 100vw;           /* 100% of the browser's viewport width */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;     /* Pulls the element out to touch left edge */
+    margin-right: -50vw;    /* Pulls the element out to touch right edge */
+  	margin-top: -3rem;    /* Pulls the video section upward into the space above it */
+    padding: 0;
+  }
+
+.video-wrapper {
+    width: 100%;
+    height: 80vh; /* Adjust this: e.g., 30vh (shorter/cinematic strip) to 70vh (taller banner) */
+    overflow: hidden;
+    position: relative;
+  }
+
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Crops top/bottom or sides automatically to fit the wrapper without distorting */
+    object-position: center; /* Centers the crop focus */
+    display: block;
+  }
+
+  /* Fixed Navigation Header */
   .site-nav-header {
     position: fixed;
     top: 0;
@@ -226,28 +266,44 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 4rem;
+    padding: 1.1rem 4rem;
     background-color: var(--bg-cream);
     border-bottom: 1px solid var(--border-mahogany);
     box-sizing: border-box;
   }
 
   .nav-brand {
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .brand-title {
+    font-size: 1.5rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 400;
+    line-height: 1;
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted-mahogany);
+    margin-top: 0.35rem;
+    display: block;
   }
 
   .nav-links {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
   }
 
   .nav-links a {
     color: var(--text-mahogany);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     transition: opacity 0.3s ease;
@@ -288,35 +344,6 @@ import Layout from '../layouts/Layout.astro';
     margin: 2rem 0;
   }
 
-  .body-text.small {
-    font-size: 1.15rem;
-    margin: 1rem 0 0 0;
-  }
-
-  /* Hero Section - Zero bottom padding/margin to pull image directly up */
-  .hero-section {
-    text-align: center;
-    padding-top: 8rem; /* Account for fixed navigation header */
-    padding-bottom: 2rem;
-    margin-bottom: 0;
-  }
-
-  .hero-section h1 {
-    font-size: 4.5rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
-
-  .text-section {
-    padding: 8rem 2rem;
-  }
-
-  .text-section.bordered {
-    border-top: 1px solid var(--border-mahogany);
-    border-bottom: 1px solid var(--border-mahogany);
-    margin: 6rem 0;
-  }
-
   .text-container.centered {
     max-width: 800px;
     margin: 0 auto;
@@ -329,21 +356,45 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
   }
 
-  /* Image Layout Settings */
+  /* Full-Width Top Hero Slider Styling */
+  .first-photo-fullwidth {
+    width: 100%;
+    margin-top: 72px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .fullwidth-image-wrapper {
+    width: 100%;
+    position: relative;
+    height: 90vh; 
+    overflow: hidden;
+  }
+
+  .fullwidth-image-wrapper.hero-slider img {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+  }
+
+  .fullwidth-image-wrapper.hero-slider img.active {
+    opacity: 1;
+    z-index: 2;
+  }
+
+  /* General Image Layout Settings */
   .image-break {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 4rem;
     box-sizing: border-box;
-  }
-
-  .image-break.first-photo {
-    margin-top: 0;
-  }
-
-  .image-break.space-top {
-    margin-top: 6rem;
   }
 
   .image-wrapper {
@@ -368,9 +419,9 @@ import Layout from '../layouts/Layout.astro';
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 0.4rem 0; 
     border-bottom: 1px solid var(--border-mahogany);
-    margin-top: 1rem;
+    margin-top: 0.25rem; 
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
@@ -394,14 +445,11 @@ import Layout from '../layouts/Layout.astro';
   .vertical-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    column-gap: 8rem; 
+    row-gap: 0;       
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 3rem;
     padding-bottom: 6rem;
-  }
-
-  .vertical-layout.reverse .content-side {
-    order: -1; 
   }
 
   .content-side h2 {
@@ -409,45 +457,174 @@ import Layout from '../layouts/Layout.astro';
     letter-spacing: 0.1em;
   }
 
-  .category-tag {
-    display: block;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: var(--muted-mahogany);
-    margin-top: 2rem;
+  /* 2x3 Services Section Layout */
+  .services-section {
+    padding: 2rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
     border-top: 1px solid var(--border-mahogany);
-    padding-top: 1rem;
-    width: max-content;
+    border-bottom: 1px solid var(--border-mahogany);
   }
 
-  /* Double Spread (Two Verticals Side-by-Side) */
-  .double-spread {
+  .services-grid-2x3 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    padding-top: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
   }
 
-  .double-caption {
-    margin-bottom: 6rem;
+  .service-tile {
+    position: relative;
+    width: 100%;
+    height: 450px; 
+    overflow: hidden;
+    background-color: var(--text-mahogany);
   }
 
-  /* Services Grid */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    max-width: 1200px;
-    margin: 5rem auto 0 auto;
-    text-align: left;
+  .service-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .service-card h3 {
+  .tile-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(36, 26, 22, 0.85) 0%, rgba(36, 26, 22, 0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    transition: background 0.4s ease;
+  }
+
+  .tile-overlay h3 {
+    color: var(--bg-cream);
     font-size: 2rem;
     letter-spacing: 0.1em;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .tile-description {
+    color: var(--bg-cream);
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0.75rem 0 0 0;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    font-weight: 300;
+  }
+
+  .service-tile:hover img {
+    transform: scale(1.03);
+  }
+
+  .service-tile:hover .tile-overlay {
+    background: linear-gradient(to top, rgba(36, 26, 22, 0.95) 20%, rgba(36, 26, 22, 0.5) 80%, rgba(36, 26, 22, 0.3) 100%);
+  }
+
+  .service-tile:hover .tile-description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Portfolio Carousel Styles (60% center + 20% peek sides) */
+  .portfolio-carousel-section {
+    padding: 2rem 0;
     border-bottom: 1px solid var(--border-mahogany);
-    padding-bottom: 1rem;
+    background-color: var(--bg-cream);
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 4rem auto 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0 20%; /* Leaves 20% on each side to peek previous/next photos */
+    box-sizing: border-box;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    opacity: 0.4;
+    transform: scale(0.95);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    display: block;
+  }
+
+  .carousel-caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--border-mahogany);
+    margin-top: 1rem;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: var(--bg-cream);
+    border: 1px solid var(--border-mahogany);
+    color: var(--text-mahogany);
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .carousel-arrow:hover {
+    background: var(--text-mahogany);
+    color: var(--bg-cream);
+  }
+
+  .prev-arrow {
+    left: 2rem;
+  }
+
+  .next-arrow {
+    right: 2rem;
   }
 
   /* Footer / Contact */
@@ -540,25 +717,26 @@ import Layout from '../layouts/Layout.astro';
       gap: 0.75rem;
     }
     
+    .nav-brand {
+      text-align: center;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+    }
+
+    .brand-subtitle {
+      font-size: 0.58rem;
+    }
+
     .nav-links {
-      gap: 1.2rem;
+      gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    .hero-section {
-      padding-top: 7rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .hero-section h1 {
-      font-size: 2.2rem; 
-      letter-spacing: 0.15em;
-    }
-
-    .subtitle {
-      font-size: 0.85rem;
-      letter-spacing: 0.2em;
+    .first-photo-fullwidth {
+      margin-top: 110px;
     }
 
     .text-section, .footer-section {
@@ -569,45 +747,140 @@ import Layout from '../layouts/Layout.astro';
       font-size: 2.2rem;
     }
 
-    .body-text {
-      font-size: 1.15rem;
-    }
-
-    .image-break {
-      padding: 0 1.5rem;
-    }
-
-    .caption-centered {
-      width: calc(100% - 3rem);
-      flex-direction: column;
-      gap: 0.5rem;
-      align-items: flex-start;
-    }
-
-    .vertical-layout {
+    .services-grid-2x3 {
       grid-template-columns: 1fr;
-      gap: 3rem;
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+      gap: 2rem;
     }
 
-    .vertical-layout.reverse .content-side {
-      order: 0;
+    .service-tile {
+      height: 350px;
     }
 
-    .double-spread {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      padding-top: 3rem;
+    .tile-description {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .services-grid {
-      grid-template-columns: 1fr;
-      gap: 3rem;
+    .carousel-track-wrapper {
+      padding: 0 1rem;
     }
-    
-    .contact-email {
-      font-size: 1.5rem;
+
+    .carousel-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+    }
+
+    .prev-arrow {
+      left: 0.5rem;
+    }
+
+    .next-arrow {
+      right: 0.5rem;
     }
   }
 </style>
+
+<script>
+  let heroSliderTimer;
+  let portfolioCarouselTimer;
+
+  function initHeroSlider() {
+    const wrapper = document.querySelector('.hero-slider');
+    if (!wrapper) return;
+
+    const slides = wrapper.querySelectorAll('img');
+    let currentIndex = 0;
+
+    if (slides.length <= 1) return;
+
+    if (heroSliderTimer) {
+      clearInterval(heroSliderTimer);
+    }
+
+    heroSliderTimer = setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 4000);
+  }
+
+  function initPortfolioCarousel() {
+    const track = document.querySelector('.carousel-track');
+    if (!track) return;
+    
+    const slides = Array.from(track.children);
+    const nextBtn = document.querySelector('.next-arrow');
+    const prevBtn = document.querySelector('.prev-arrow');
+    
+    let currentIndex = 0;
+
+    if (slides.length <= 1) return;
+
+    function updateSlidePosition() {
+      slides.forEach((slide, idx) => {
+        if (idx === currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlidePosition();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlidePosition();
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetTimer();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetTimer();
+      });
+    }
+
+    function startTimer() {
+      portfolioCarouselTimer = setInterval(nextSlide, 4000);
+    }
+
+    function resetTimer() {
+      clearInterval(portfolioCarouselTimer);
+      startTimer();
+    }
+
+    if (portfolioCarouselTimer) {
+      clearInterval(portfolioCarouselTimer);
+    }
+
+    startTimer();
+    window.addEventListener('resize', updateSlidePosition);
+    updateSlidePosition();
+  }
+
+  function initAll() {
+    initHeroSlider();
+    initPortfolioCarousel();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+
+  document.addEventListener('astro:page-load', initAll);
+</script>
