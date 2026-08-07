@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="The Lightworks | Editorial Portfolio">
   <div class="page-wrapper">
     
-    <header class="site-nav-header">
+<header class="site-nav-header">
       <div class="nav-brand">
         <span class="brand-title">THE LIGHTWORKS</span>
         <span class="brand-subtitle">ARCHITECTURAL & REAL ESTATE MEDIA</span>
@@ -14,7 +14,6 @@ import Layout from '../layouts/Layout.astro';
         <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#services">SERVICES</a>
-        <a href="#video">VIDEO</a>
         <a href="#portfolio">PORTFOLIO</a>
         <a href="#contact">CONTACT</a>
       </nav>
@@ -128,7 +127,7 @@ import Layout from '../layouts/Layout.astro';
     <section class="portfolio-carousel-section" id="portfolio">
       <div class="text-container centered">
         <h2>Portfolio</h2>
-        <p class="subtitle italic">Selected architectural and spatial works</p>
+        <p class="subtitle italic">Selected architectural and Real Estate work</p>
       </div>
 
       <div class="carousel-container">
@@ -137,31 +136,15 @@ import Layout from '../layouts/Layout.astro';
           <div class="carousel-track">
             <div class="carousel-slide active">
               <img src="/images/DSC08587-HDR-Export.jpg" alt="Penthouse Proportion" />
-              <div class="carousel-caption">
-                <span class="caption-title">Penthouse Proportion</span>
-                <span class="caption-category">Luxury Editorial</span>
-              </div>
             </div>
             <div class="carousel-slide">
               <img src="/images/DSC08763-HDR-Export.jpg" alt="Diffused Light" />
-              <div class="carousel-caption">
-                <span class="caption-title">Diffused Light</span>
-                <span class="caption-category">Luminous Interiors</span>
-              </div>
             </div>
             <div class="carousel-slide">
               <img src="/images/DSC08868-HDR-Export.jpg" alt="Textural Harmony" />
-              <div class="carousel-caption">
-                <span class="caption-title">Textural Harmony</span>
-                <span class="caption-category">Residential Curation</span>
-              </div>
             </div>
             <div class="carousel-slide">
               <img src="/images/DSC08990-HDR-Export.jpg" alt="Evening Atmosphere" />
-              <div class="carousel-caption">
-                <span class="caption-title">Evening Atmosphere</span>
-                <span class="caption-category">Twilight Ambiance</span>
-              </div>
             </div>
           </div>
         </div>
@@ -171,12 +154,12 @@ import Layout from '../layouts/Layout.astro';
 
     <footer class="footer-section" id="contact">
       <div class="text-container centered">
-        <h2>Enquiries</h2>
-        <p class="subtitle italic">For commissioning and collaborative rates</p>
+        <h2>Contact</h2>
+        <p class="subtitle italic">Connect with us through the channels below or submit your details via the form.</p>
         
         <div class="contact-details">
-          <a href="mailto:info@thelightworks.art" class="contact-email">info@thelightworks.art</a>
-          <p class="contact-phone">+44 (0) 20 7946 0912</p>
+          <a href="mailto:info@thelightworks.art" class="contact-email">enquiries@thelightworks.art</a>
+          <p class="contact-phone">+44 (0) 7376 940 650S</p>
         </div>
 
         <form class="luxury-form" onsubmit="event.preventDefault();">
@@ -237,7 +220,7 @@ import Layout from '../layouts/Layout.astro';
     right: 50%;
     margin-left: -50vw;     /* Pulls the element out to touch left edge */
     margin-right: -50vw;    /* Pulls the element out to touch right edge */
-  	margin-top: -3rem;    /* Pulls the video section upward into the space above it */
+  	margin-top: -3.7rem;    /* Pulls the video section upward into the space above it */
     padding: 0;
   }
 
@@ -536,8 +519,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   /* Portfolio Carousel Styles (60% center + 20% peek sides) */
-  .portfolio-carousel-section {
-    padding: 2rem 0;
+.portfolio-carousel-section {
+    padding: 1rem 0 2rem 0; /* Reduced bottom padding to 2rem */
     border-bottom: 1px solid var(--border-mahogany);
     background-color: var(--bg-cream);
   }
@@ -546,7 +529,7 @@ import Layout from '../layouts/Layout.astro';
     position: relative;
     width: 100%;
     max-width: 1600px;
-    margin: 4rem auto 0 auto;
+    margin: 1.5rem auto 0 auto;
     display: flex;
     align-items: center;
   }
@@ -629,13 +612,14 @@ import Layout from '../layouts/Layout.astro';
 
   /* Footer / Contact */
   .footer-section {
-    padding: 10rem 2rem 6rem 2rem;
+    padding: 2rem 2rem 6rem 2rem;
     background-color: #F2EFE9;
-    margin-top: 8rem;
+    margin-top: 2rem;
   }
 
   .contact-details {
-    margin: 4rem 0;
+    margin-top: 1.5rem;    /* Controls space between subtitle and email (reduced from 4rem) */
+    margin-bottom: 1.5rem; /* Controls space between phone number and input box */
   }
 
   .contact-email {
