@@ -46,7 +46,7 @@ import Layout from '../layouts/Layout.astro';
         <img src="/images/DSC08975-HDR-Export.jpg" alt="Minimalist Interior Volume" />
       </div>
       <div class="content-side">
-        <h2>ABOUT</h2>
+        <h2>About</h2>
         <p class="body-text">
           We are dedicated to creating exceptional, editorial-style architectural imagery and real estate media. Working closely with our clients, we tailor every capture to align with the unique vision and character of the property.
         </p>
@@ -158,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="subtitle italic">Connect with us through the channels below or submit your details via the form.</p>
         
         <div class="contact-details">
-          <a href="mailto:enquiries@thelightworks.art" class="contact-email">enquiries@thelightworks.art</a>
+          <a href="mailto:info@thelightworks.art" class="contact-email">enquiries@thelightworks.art</a>
           <p class="contact-phone">+44 (0) 7376 940 650</p>
         </div>
 
@@ -438,10 +438,10 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 2rem;
   }
 
-/* 2x3 Services Section Layout */
+  /* 2x3 Services Section Layout */
   .services-section {
     padding: 2rem 2rem;
-    max-width: 1200px; /* Reduced from 1600px to make the columns narrower */
+    max-width: 1600px;
     margin: 0 auto;
     border-top: 1px solid var(--border-mahogany);
     border-bottom: 1px solid var(--border-mahogany);
@@ -450,14 +450,14 @@ import Layout from '../layouts/Layout.astro';
   .services-grid-2x3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2rem;
     margin-top: 2rem;
   }
 
   .service-tile {
     position: relative;
     width: 100%;
-    height: 350px; /* Reduced from 450px to make the tiles shorter */
+    height: 450px; 
     overflow: hidden;
     background-color: var(--text-mahogany);
   }
@@ -748,41 +748,18 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 0 !important;
     }
 
-    /* FULL WIDTH LINE: Underneath the Hero Image */
-    .caption-centered {
-      width: 100vw !important;
-      position: relative !important;
-      left: 50% !important;
-      right: 50% !important;
-      margin-left: -50vw !important;
-      margin-right: -50vw !important;
-      border-bottom: 1px solid var(--border-mahogany) !important;
-      padding: 0 !important;
-      height: 0 !important;
-    }
-
-    /* 4. UNIFIED SECTION TITLES: About, Services, Portfolio, Contact */
-    .vertical-layout .content-side h2,
-    .services-section .text-container.centered h2,
-    .portfolio-carousel-section .text-container.centered h2,
-    .footer-section .text-container.centered h2 {
-      grid-column: 1 / -1 !important; 
-      font-size: 1.25rem !important; 
-      letter-spacing: 0.2em !important; 
-      text-transform: uppercase !important; 
-      text-align: center !important; 
-      font-weight: 300 !important;
-      margin: 0 auto 1.5rem auto !important; 
-      padding: 0 !important;
-      width: 100% !important;
-    }
-
-    /* 5. About Section - Centered Heading & Grid Alignment */
+    /* 4. About Section - Compact & Aligned */
     .image-break {
       padding: 0 1rem !important;
       margin: 0 !important;
       width: 100% !important;
       box-sizing: border-box !important;
+    }
+
+    hr, .image-break hr, .vertical-layout hr {
+      margin: 0 auto !important; 
+      padding: 0 !important;
+      height: 1px !important;
     }
 
     .vertical-layout {
@@ -791,7 +768,7 @@ import Layout from '../layouts/Layout.astro';
       column-gap: 5% !important;
       row-gap: 0 !important; 
       align-items: start !important;
-      padding: 2rem 0 0 0 !important; /* Top gap dropping down from the horizontal line */
+      padding: 0 !important; 
       margin: 0 !important; 
       width: 100% !important;
       box-sizing: border-box !important;
@@ -817,11 +794,20 @@ import Layout from '../layouts/Layout.astro';
       display: contents !important;
     }
 
+    .vertical-layout .content-side h2 {
+      grid-column: 1 / -1 !important;
+      grid-row: 1 !important;
+      font-size: 1.6rem !important;
+      margin: 0 0 0.2rem 0 !important; 
+      padding: 0 !important;
+      text-align: left !important;
+    }
+
     .vertical-layout .body-text {
       grid-column: 2 !important;
       font-size: 0.8rem !important;
-      line-height: 1.35 !important; 
-      margin: 0 0 0.6rem 0 !important; 
+      line-height: 1.3 !important; 
+      margin: 0 0 0.4rem 0 !important; 
       padding: 0 !important;
       white-space: normal !important;
       word-break: normal !important; 
@@ -832,34 +818,13 @@ import Layout from '../layouts/Layout.astro';
       margin-top: 0 !important;
     }
 
-    /* FULL WIDTH LINE: Between About & Video */
-    .vertical-layout .full-width-divider {
-      grid-column: 1 / -1 !important;
-      width: 100vw !important;
-      position: relative !important;
-      left: 50% !important;
-      right: 50% !important;
-      margin-left: -50vw !important;
-      margin-right: -50vw !important;
-      border-bottom: 1px solid var(--border-mahogany) !important;
-      margin-top: 2rem !important;    /* Gap below the About content */
-      margin-bottom: 1.5rem !important; /* Gap above the Video */
-      padding: 0 !important;
-      height: 0 !important;
-    }
-
-    /* 6. Video Break - 16:9 Aspect Ratio & Bottom Divider */
+    /* 5. Video Break - 16:9 Aspect Ratio */
     .video-break {
-      width: 100vw !important;
-      position: relative !important;
-      left: 50% !important;
-      right: 50% !important;
-      margin-left: -50vw !important;
-      margin-right: -50vw !important;
-      margin-top: 0 !important;
-      margin-bottom: 1.5rem !important; /* Gap below the video */
-      padding-bottom: 1.5rem !important; /* Pushes the bottom border down */
-      border-bottom: 1px solid var(--border-mahogany) !important; /* LINE: Between Video & Services */
+      width: 100% !important;
+      left: auto !important;
+      right: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
     
     .video-wrapper {
@@ -871,121 +836,27 @@ import Layout from '../layouts/Layout.astro';
       padding: 0 !important;
     }
 
-    /* 7. Services Grid */
+    /* 6. Services Grid */
     .services-section {
-      padding: 0 1rem 1.5rem 1rem !important;
-      border-top: none !important; /* Removed to prevent double-border with video section */
-    }
-
-    .services-section .text-container.centered .subtitle {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-top: 0 !important;
+      padding: 1.5rem 1rem !important;
     }
 
     .services-grid-2x3 {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 0.75rem !important;
-      margin-top: 1.5rem !important;
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
     }
 
-    .service-tile {
-      height: 200px !important;
-    }
-
-    .tile-overlay {
-      padding: 0.75rem !important;
-    }
-
-    .tile-overlay h3 {
-      font-size: 0.95rem !important;
-      letter-spacing: 0.05em !important;
-    }
-
-    .tile-description {
-      font-size: 0.65rem !important;
-      line-height: 1.3 !important;
-      margin-top: 0.25rem !important;
-      opacity: 1 !important; 
-      transform: translateY(0) !important;
-    }
-
-    /* 8. Portfolio Carousel - Horizontal Images */
-    .portfolio-carousel-section {
-      padding: 1.5rem 1rem 2rem 1rem !important;
-    }
-
-    .portfolio-carousel-section .text-container.centered .subtitle {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-top: 0 !important;
-    }
-
-    .carousel-container {
-      margin-top: 1.5rem !important;
-    }
-
-    .carousel-track-wrapper {
-      padding: 0 1rem !important;
-    }
-
-    .carousel-slide img {
-      width: 100% !important;
-      height: auto !important;
-      aspect-ratio: 3 / 2 !important; 
-      object-fit: cover !important;
-    }
-
-    .carousel-arrow {
-      width: 32px !important;
-      height: 32px !important;
-      font-size: 1rem !important;
-    }
-
-    .prev-arrow { left: 0.25rem !important; }
-    .next-arrow { right: 0.25rem !important; }
-
-    /* 9. Footer / Contact */
+    /* 7. Footer / Contact */
     .footer-section {
-      padding: 2.5rem 1rem 3rem 1rem !important; 
-    }
-
-    .footer-section .text-container.centered .subtitle {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-top: 0 !important;
-      margin-bottom: 1.5rem !important;
-    }
-
-    .contact-details {
-      margin-top: 1rem !important;
-      margin-bottom: 1.5rem !important;
+      padding: 2rem 1rem 3rem 1rem !important; 
     }
 
     .contact-email {
-      font-size: 1.1rem !important;
-      margin-bottom: 0.25rem !important;
+      font-size: 1.25rem !important;
     }
 
     .contact-phone {
-      font-size: 0.85rem !important;
-    }
-
-    .luxury-form {
-      gap: 1rem !important; 
-      margin-bottom: 2rem !important;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .submit-btn {
-      padding: 1rem !important; 
-      font-size: 0.9rem !important; 
-    }
-
-    .copyright {
-      font-size: 0.65rem !important;
+      font-size: 0.95rem !important;
     }
   }
 </style>
