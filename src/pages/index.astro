@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="The Lightworks | Editorial Portfolio">
   <div class="page-wrapper">
     
-<header class="site-nav-header">
+    <header class="site-nav-header">
       <div class="nav-brand">
         <span class="brand-title">THE LIGHTWORKS</span>
         <span class="brand-subtitle">ARCHITECTURAL & REAL ESTATE MEDIA</span>
@@ -70,7 +70,7 @@ import Layout from '../layouts/Layout.astro';
     <section class="services-section" id="services">
       <div class="text-container centered">
         <h2>Services</h2>
-        <p class="subtitle italic">The Lightworks delivers premium property marketing tailored for estate agents, developers, interior designers, and private clients. We present every space with clarity and style, creating an engaging digital presence that elevates its true value.'</p>
+        <p class="subtitle italic">The Lightworks delivers premium property marketing tailored for estate agents, developers, interior designers, and private clients. We present every space with clarity and style, creating an engaging digital presence that elevates its true value.</p>
       </div>
 
       <div class="services-grid-2x3">
@@ -155,11 +155,11 @@ import Layout from '../layouts/Layout.astro';
     <footer class="footer-section" id="contact">
       <div class="text-container centered">
         <h2>Contact</h2>
-        <p class="subtitle italic">Connect with us through the channels below or submit your details via the form.ff</p>
+        <p class="subtitle italic">Connect with us through the channels below or submit your details via the form.</p>
         
         <div class="contact-details">
           <a href="mailto:info@thelightworks.art" class="contact-email">enquiries@thelightworks.art</a>
-          <p class="contact-phone">+44 (0) 7376 940 650S</p>
+          <p class="contact-phone">+44 (0) 7376 940 650</p>
         </div>
 
         <form class="luxury-form" onsubmit="event.preventDefault();">
@@ -193,6 +193,7 @@ import Layout from '../layouts/Layout.astro';
   html {
     scroll-behavior: smooth;
     background-color: var(--bg-cream) !important;
+    overflow-x: hidden;
   }
 
   body {
@@ -201,32 +202,33 @@ import Layout from '../layouts/Layout.astro';
     font-family: 'Cormorant Garamond', serif !important;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
     -webkit-font-smoothing: antialiased;
   }
 
-  .full-width-divider {
-    grid-column: 1 / -1;
-    border-bottom: 1px solid var(--border-mahogany);
+  .page-wrapper {
     width: 100%;
-    margin-top: 2rem;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 
   /* Cinematic Video Break */
-  /* Full-bleed section outside of standard page constraints */
   .video-break {
-    width: 100vw;           /* 100% of the browser's viewport width */
+    width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;     /* Pulls the element out to touch left edge */
-    margin-right: -50vw;    /* Pulls the element out to touch right edge */
-  	margin-top: -3.7rem;    /* Pulls the video section upward into the space above it */
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: -3.7rem;
     padding: 0;
   }
 
-.video-wrapper {
+  .video-wrapper {
     width: 100%;
-    height: 80vh; /* Adjust this: e.g., 30vh (shorter/cinematic strip) to 70vh (taller banner) */
+    height: 80vh;
     overflow: hidden;
     position: relative;
   }
@@ -234,8 +236,8 @@ import Layout from '../layouts/Layout.astro';
   .video-wrapper video {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* Crops top/bottom or sides automatically to fit the wrapper without distorting */
-    object-position: center; /* Centers the crop focus */
+    object-fit: cover;
+    object-position: center;
     display: block;
   }
 
@@ -342,7 +344,7 @@ import Layout from '../layouts/Layout.astro';
   /* Full-Width Top Hero Slider Styling */
   .first-photo-fullwidth {
     width: 100%;
-    margin-top: 72px;
+    margin-top: 95px;
     padding: 0;
     box-sizing: border-box;
   }
@@ -380,23 +382,6 @@ import Layout from '../layouts/Layout.astro';
     box-sizing: border-box;
   }
 
-  .image-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-  }
-
-  .image-wrapper img {
-    width: 100%;
-    height: auto;
-    max-height: 85vh;
-    object-fit: contain !important;
-    display: block;
-    margin: 0 auto;
-  }
-
   /* Captions */
   .caption-centered {
     display: flex;
@@ -411,33 +396,46 @@ import Layout from '../layouts/Layout.astro';
     width: calc(100% - 8rem);
   }
 
-  .caption-title {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: var(--text-mahogany);
-  }
-
-  .caption-category {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: var(--muted-mahogany);
-  }
-
-  /* Vertical Split Layout */
+  /* Flexbox Split Layout for About Section (Desktop) */
   .vertical-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 8rem; 
-    row-gap: 0;       
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 5rem;
     padding-top: 3rem;
     padding-bottom: 6rem;
+    box-sizing: border-box;
+  }
+
+  .vertical-layout .image-wrapper {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+
+  .vertical-layout .image-wrapper img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 75vh;
+    object-fit: contain !important;
+    display: block;
+    margin: 0;
+  }
+
+  .vertical-layout .content-side {
+    flex: 1;
+    min-width: 0;
   }
 
   .content-side h2 {
     font-size: 2.5rem;
     letter-spacing: 0.1em;
+  }
+
+  .vertical-layout .full-width-divider {
+    flex: 0 0 100%;
+    border-bottom: 1px solid var(--border-mahogany);
+    width: 100%;
+    margin-top: 2rem;
   }
 
   /* 2x3 Services Section Layout */
@@ -518,9 +516,9 @@ import Layout from '../layouts/Layout.astro';
     transform: translateY(0);
   }
 
-  /* Portfolio Carousel Styles (60% center + 20% peek sides) */
-.portfolio-carousel-section {
-    padding: 1rem 0 2rem 0; /* Reduced bottom padding to 2rem */
+  /* Portfolio Carousel Styles */
+  .portfolio-carousel-section {
+    padding: 1rem 0 2rem 0;
     border-bottom: 1px solid var(--border-mahogany);
     background-color: var(--bg-cream);
   }
@@ -538,7 +536,7 @@ import Layout from '../layouts/Layout.astro';
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 0 20%; /* Leaves 20% on each side to peek previous/next photos */
+    padding: 0 20%;
     box-sizing: border-box;
   }
 
@@ -568,15 +566,6 @@ import Layout from '../layouts/Layout.astro';
     height: 70vh;
     object-fit: cover;
     display: block;
-  }
-
-  .carousel-caption {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-    border-bottom: 1px solid var(--border-mahogany);
-    margin-top: 1rem;
   }
 
   .carousel-arrow {
@@ -618,8 +607,8 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .contact-details {
-    margin-top: 1.5rem;    /* Controls space between subtitle and email (reduced from 4rem) */
-    margin-bottom: 1.5rem; /* Controls space between phone number and input box */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .contact-email {
@@ -693,74 +682,181 @@ import Layout from '../layouts/Layout.astro';
     color: var(--muted-mahogany);
   }
 
-  /* Mobile Optimization */
-  @media (max-width: 900px) {
+  /* ==========================================
+     MOBILE OPTIMIZATION
+     ========================================== */
+@media (max-width: 768px) {
+    /* 1. Reset Global Horizontal Overflow */
+    body, html, .page-wrapper {
+      overflow-x: hidden !important;
+      width: 100% !important;
+      max-width: 100vw !important;
+    }
+
+    /* 2. Header - Forced Single Line Navigation */
     .site-nav-header {
-      padding: 1rem 1.5rem;
-      flex-direction: column;
-      gap: 0.75rem;
+      padding: 1rem 0.5rem !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 1rem !important;
+      box-sizing: border-box !important;
     }
-    
+
     .nav-brand {
-      text-align: center;
+      align-items: center !important;
+      text-align: center !important;
     }
 
-    .brand-title {
-      font-size: 1.3rem;
+    .nav-brand .brand-title {
+      font-size: 1.15rem !important;
+      letter-spacing: 0.1em !important;
     }
 
-    .brand-subtitle {
-      font-size: 0.58rem;
+    .nav-brand .brand-subtitle {
+      font-size: 0.55rem !important;
+      letter-spacing: 0.15em !important;
+      margin-top: 0.3rem !important;
     }
 
     .nav-links {
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: center !important;
+      gap: 0.75rem !important;
+      width: 100% !important;
     }
 
+    .nav-links a {
+      font-size: 0.65rem !important;
+      letter-spacing: 0.1em !important;
+      padding: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    /* 3. Top Hero Section - 16:9 Aspect Ratio */
     .first-photo-fullwidth {
-      margin-top: 110px;
+      margin-top: 130px !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
     }
 
-    .text-section, .footer-section {
-      padding: 5rem 1.5rem;
+    .fullwidth-image-wrapper.hero-slider {
+      aspect-ratio: 16 / 9 !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      margin-bottom: 0 !important;
     }
 
-    .text-container.centered h2 {
-      font-size: 2.2rem;
+    /* 4. About Section - Compact & Aligned */
+    .image-break {
+      padding: 0 1rem !important;
+      margin: 0 !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    hr, .image-break hr, .vertical-layout hr {
+      margin: 0 auto !important; 
+      padding: 0 !important;
+      height: 1px !important;
+    }
+
+    .vertical-layout {
+      display: grid !important;
+      grid-template-columns: 38% 57% !important;
+      column-gap: 5% !important;
+      row-gap: 0 !important; 
+      align-items: start !important;
+      padding: 0 !important; 
+      margin: 0 !important; 
+      width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    .vertical-layout .image-wrapper {
+      grid-column: 1 !important;
+      grid-row: 2 / 10 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .vertical-layout .image-wrapper img {
+      width: 100% !important;
+      height: auto !important;
+      max-height: none !important;
+      display: block !important;
+    }
+
+    .vertical-layout .content-side {
+      display: contents !important;
+    }
+
+    .vertical-layout .content-side h2 {
+      grid-column: 1 / -1 !important;
+      grid-row: 1 !important;
+      font-size: 1.6rem !important;
+      margin: 0 0 0.2rem 0 !important; 
+      padding: 0 !important;
+      text-align: left !important;
+    }
+
+    .vertical-layout .body-text {
+      grid-column: 2 !important;
+      font-size: 0.8rem !important;
+      line-height: 1.3 !important; 
+      margin: 0 0 0.4rem 0 !important; 
+      padding: 0 !important;
+      white-space: normal !important;
+      word-break: normal !important; 
+      overflow-wrap: normal !important;
+    }
+
+    .vertical-layout .body-text:first-of-type {
+      margin-top: 0 !important;
+    }
+
+    /* 5. Video Break - 16:9 Aspect Ratio */
+    .video-break {
+      width: 100% !important;
+      left: auto !important;
+      right: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    .video-wrapper {
+      aspect-ratio: 16 / 9 !important;
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* 6. Services Grid */
+    .services-section {
+      padding: 1.5rem 1rem !important;
     }
 
     .services-grid-2x3 {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
     }
 
-    .service-tile {
-      height: 350px;
+    /* 7. Footer / Contact */
+    .footer-section {
+      padding: 2rem 1rem 3rem 1rem !important; 
     }
 
-    .tile-description {
-      opacity: 1;
-      transform: translateY(0);
+    .contact-email {
+      font-size: 1.25rem !important;
     }
 
-    .carousel-track-wrapper {
-      padding: 0 1rem;
-    }
-
-    .carousel-arrow {
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem;
-    }
-
-    .prev-arrow {
-      left: 0.5rem;
-    }
-
-    .next-arrow {
-      right: 0.5rem;
+    .contact-phone {
+      font-size: 0.95rem !important;
     }
   }
 </style>
