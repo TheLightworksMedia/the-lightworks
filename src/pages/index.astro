@@ -21,19 +21,25 @@ import Layout from '../layouts/Layout.astro';
 
     <section class="first-photo-fullwidth" id="home">
       <div class="fullwidth-image-wrapper hero-slider">
-        <img 
-          class="active" 
-          src="/images/DSC08582-HDR-Export.jpg" 
-          alt="The Woodland Spa Estate" 
-        />
-        <img 
-          src="/images/DSC08537-HDR-Export.jpg" 
-          alt="The Concrete Horizon" 
-        />
-        <img 
-          src="/images/DSC08642-HDR-Export.jpg" 
-          alt="Spatial Fluidity" 
-        />
+        
+        <!-- Slide 1 -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/DSC02802-Insta.jpg" />
+          <img class="active" src="/images/DSC08582-HDR-Export.jpg" alt="The Woodland Spa Estate" />
+        </picture>
+
+        <!-- Slide 2 -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/DSC02803-Insta.jpg" />
+          <img src="/images/DSC08537-HDR-Export.jpg" alt="The Concrete Horizon" />
+        </picture>
+
+        <!-- Slide 3 -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/DSC02804-Insta.jpg" />
+          <img src="/images/DSC08642-HDR-Export.jpg" alt="Spatial Fluidity" />
+        </picture>
+
       </div>
 
       <div class="caption-centered">
@@ -61,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
     <section class="video-break" id="video">
       <div class="video-wrapper">
         <video autoplay muted loop playsinline preload="auto">
-          <source src="/videos/architectural-reel.mp4" type="video/mp4" />
+          <source src="/videos/Wrenwood-Reel.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -73,7 +79,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="subtitle italic">The Lightworks delivers premium property marketing tailored for estate agents, developers, interior designers, and private clients. We present every space with clarity and style, creating an engaging digital presence that elevates its true value.</p>
       </div>
 
-      <div class="services-grid-2x3">
+      <div class="services-grid-2x4">
         <div class="service-tile">
           <img src="/images/DSC08582-HDR-Export.jpg" alt="Architectural Photography" />
           <div class="tile-overlay">
@@ -121,6 +127,22 @@ import Layout from '../layouts/Layout.astro';
             <p class="tile-description">Engaging, short-form visual content optimized for digital marketing and high-end reach.</p>
           </div>
         </div>
+
+        <div class="service-tile">
+          <img src="/images/YOUR_AIRBNB_IMAGE.jpg" alt="Short-Term Rental Photography" />
+          <div class="tile-overlay">
+            <h3>Short-Term Rentals</h3>
+            <p class="tile-description">High-impact imagery designed to capture attention, maximize bookings, and elevate your listing.</p>
+          </div>
+        </div>
+
+        <div class="service-tile">
+          <img src="/images/YOUR_COMMERCIAL_IMAGE.jpg" alt="Commercial Space Photography" />
+          <div class="tile-overlay">
+            <h3>Commercial Spaces</h3>
+            <p class="tile-description">Bespoke visual content for restaurants, clinics, and retail venues to strengthen your brand identity.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -134,18 +156,35 @@ import Layout from '../layouts/Layout.astro';
         <button class="carousel-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
         <div class="carousel-track-wrapper">
           <div class="carousel-track">
+            
             <div class="carousel-slide active">
-              <img src="/images/DSC08587-HDR-Export.jpg" alt="Penthouse Proportion" />
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0001.JPG" />
+                <img src="/images/DSC08587-HDR-Export.jpg" alt="Penthouse Proportion" />
+              </picture>
             </div>
+            
             <div class="carousel-slide">
-              <img src="/images/DSC08763-HDR-Export.jpg" alt="Diffused Light" />
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0002.JPG" />
+                <img src="/images/DSC08763-HDR-Export.jpg" alt="Diffused Light" />
+              </picture>
             </div>
+            
             <div class="carousel-slide">
-              <img src="/images/DSC08868-HDR-Export.jpg" alt="Textural Harmony" />
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0003.JPG" />
+                <img src="/images/DSC08868-HDR-Export.jpg" alt="Textural Harmony" />
+              </picture>
             </div>
+            
             <div class="carousel-slide">
-              <img src="/images/DSC08990-HDR-Export.jpg" alt="Evening Atmosphere" />
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0004.JPG" />
+                <img src="/images/DSC08990-HDR-Export.jpg" alt="Evening Atmosphere" />
+              </picture>
             </div>
+
           </div>
         </div>
         <button class="carousel-arrow next-arrow" aria-label="Next slide">&#10095;</button>
@@ -162,16 +201,24 @@ import Layout from '../layouts/Layout.astro';
           <p class="contact-phone">+44 (0) 7376 940 650</p>
         </div>
 
-        <form class="luxury-form" onsubmit="event.preventDefault();">
+        <form class="luxury-form" action="https://api.web3forms.com/submit" method="POST">
+          
+          <input type="hidden" name="access_key" value="d8c351b8-59e4-4c99-9236-ecd105a16121">
+          
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input type="text" name="name" placeholder="Your Name" required />
           </div>
+          
           <div class="form-group">
-            <input type="email" placeholder="Your Email Address" required />
+            <input type="email" name="email" placeholder="Your Email Address" required />
           </div>
+          
           <div class="form-group">
-            <textarea placeholder="Project Details & Location" rows="4" required></textarea>
+            <textarea name="message" placeholder="Project Details & Location" rows="4" required></textarea>
           </div>
+          
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
           <button type="submit" class="submit-btn">Send Enquiry</button>
         </form>
         
@@ -356,7 +403,8 @@ import Layout from '../layouts/Layout.astro';
     overflow: hidden;
   }
 
-  .fullwidth-image-wrapper.hero-slider img {
+  .fullwidth-image-wrapper.hero-slider img,
+  .fullwidth-image-wrapper.hero-slider picture img {
     position: absolute !important;
     top: 0;
     left: 0;
@@ -368,7 +416,8 @@ import Layout from '../layouts/Layout.astro';
     transition: opacity 1.2s ease-in-out;
   }
 
-  .fullwidth-image-wrapper.hero-slider img.active {
+  .fullwidth-image-wrapper.hero-slider img.active,
+  .fullwidth-image-wrapper.hero-slider picture img.active {
     opacity: 1;
     z-index: 2;
   }
@@ -438,16 +487,16 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 2rem;
   }
 
-/* 2x3 Services Section Layout */
+  /* 2x4 Services Section Layout */
   .services-section {
     padding: 2rem 2rem;
-    max-width: 1200px; /* Reduced from 1600px to make the columns narrower */
+    max-width: 1200px;
     margin: 0 auto;
     border-top: 1px solid var(--border-mahogany);
     border-bottom: 1px solid var(--border-mahogany);
   }
 
-  .services-grid-2x3 {
+  .services-grid-2x4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
@@ -457,7 +506,7 @@ import Layout from '../layouts/Layout.astro';
   .service-tile {
     position: relative;
     width: 100%;
-    height: 350px; /* Reduced from 450px to make the tiles shorter */
+    height: 350px;
     overflow: hidden;
     background-color: var(--text-mahogany);
   }
@@ -561,7 +610,8 @@ import Layout from '../layouts/Layout.astro';
     transform: scale(1);
   }
 
-  .carousel-slide img {
+  .carousel-slide img,
+  .carousel-slide picture img {
     width: 100%;
     height: 70vh;
     object-fit: cover;
@@ -733,7 +783,7 @@ import Layout from '../layouts/Layout.astro';
       white-space: nowrap !important;
     }
 
-    /* 3. Top Hero Section - 16:9 Aspect Ratio */
+    /* 3. Top Hero Section - Updated to 4:5 Aspect Ratio for Vertical Crops */
     .first-photo-fullwidth {
       margin-top: 130px !important;
       margin-bottom: 0 !important;
@@ -741,7 +791,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .fullwidth-image-wrapper.hero-slider {
-      aspect-ratio: 16 / 9 !important;
+      aspect-ratio: 4 / 5 !important;
       height: auto !important;
       min-height: 0 !important;
       max-height: none !important;
@@ -787,11 +837,11 @@ import Layout from '../layouts/Layout.astro';
 
     .vertical-layout {
       display: grid !important;
-      grid-template-columns: 38% 57% !important;
+      grid-template-columns: 55% 40% !important;
       column-gap: 5% !important;
       row-gap: 0 !important; 
       align-items: start !important;
-      padding: 2rem 0 0 0 !important; /* Top gap dropping down from the horizontal line */
+      padding: 2rem 0 0 0 !important;
       margin: 0 !important; 
       width: 100% !important;
       box-sizing: border-box !important;
@@ -842,13 +892,13 @@ import Layout from '../layouts/Layout.astro';
       margin-left: -50vw !important;
       margin-right: -50vw !important;
       border-bottom: 1px solid var(--border-mahogany) !important;
-      margin-top: 2rem !important;    /* Gap below the About content */
-      margin-bottom: 1.5rem !important; /* Gap above the Video */
+      margin-top: 2rem !important;
+      margin-bottom: 1.5rem !important;
       padding: 0 !important;
       height: 0 !important;
     }
 
-    /* 6. Video Break - 16:9 Aspect Ratio & Bottom Divider */
+    /* 6. Video Break - Updated to 9:16 Aspect Ratio */
     .video-break {
       width: 100vw !important;
       position: relative !important;
@@ -857,13 +907,13 @@ import Layout from '../layouts/Layout.astro';
       margin-left: -50vw !important;
       margin-right: -50vw !important;
       margin-top: 0 !important;
-      margin-bottom: 1.5rem !important; /* Gap below the video */
-      padding-bottom: 1.5rem !important; /* Pushes the bottom border down */
-      border-bottom: 1px solid var(--border-mahogany) !important; /* LINE: Between Video & Services */
+      margin-bottom: 1.5rem !important; 
+      padding-bottom: 1.5rem !important;
+      border-bottom: 1px solid var(--border-mahogany) !important;
     }
     
     .video-wrapper {
-      aspect-ratio: 16 / 9 !important;
+      aspect-ratio: 9 / 16 !important;
       height: auto !important;
       min-height: 0 !important;
       max-height: none !important;
@@ -874,7 +924,7 @@ import Layout from '../layouts/Layout.astro';
     /* 7. Services Grid */
     .services-section {
       padding: 0 1rem 1.5rem 1rem !important;
-      border-top: none !important; /* Removed to prevent double-border with video section */
+      border-top: none !important; 
     }
 
     .services-section .text-container.centered .subtitle {
@@ -883,7 +933,7 @@ import Layout from '../layouts/Layout.astro';
       margin-top: 0 !important;
     }
 
-    .services-grid-2x3 {
+    .services-grid-2x4 {
       display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;
       gap: 0.75rem !important;
@@ -911,9 +961,13 @@ import Layout from '../layouts/Layout.astro';
       transform: translateY(0) !important;
     }
 
-    /* 8. Portfolio Carousel - Horizontal Images */
+    /* 8. Portfolio Carousel - Reduced Whitespace & Vertical Images */
     .portfolio-carousel-section {
-      padding: 1.5rem 1rem 2rem 1rem !important;
+      padding: 1.5rem 0 2rem 0 !important;
+    }
+
+    .portfolio-carousel-section .text-container.centered {
+      padding: 0 1rem !important; 
     }
 
     .portfolio-carousel-section .text-container.centered .subtitle {
@@ -927,13 +981,18 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .carousel-track-wrapper {
-      padding: 0 1rem !important;
+      padding: 0 !important; 
     }
 
-    .carousel-slide img {
+    .carousel-slide {
+      padding: 0 0.5rem !important;
+    }
+
+    .carousel-slide img,
+    .carousel-slide picture img {
       width: 100% !important;
       height: auto !important;
-      aspect-ratio: 3 / 2 !important; 
+      aspect-ratio: 4 / 5 !important;
       object-fit: cover !important;
     }
 
@@ -943,8 +1002,8 @@ import Layout from '../layouts/Layout.astro';
       font-size: 1rem !important;
     }
 
-    .prev-arrow { left: 0.25rem !important; }
-    .next-arrow { right: 0.25rem !important; }
+    .prev-arrow { left: 0.75rem !important; }
+    .next-arrow { right: 0.75rem !important; }
 
     /* 9. Footer / Contact */
     .footer-section {
@@ -998,7 +1057,7 @@ import Layout from '../layouts/Layout.astro';
     const wrapper = document.querySelector('.hero-slider');
     if (!wrapper) return;
 
-    const slides = wrapper.querySelectorAll('img');
+    const slides = wrapper.querySelectorAll('picture img, > img');
     let currentIndex = 0;
 
     if (slides.length <= 1) return;
