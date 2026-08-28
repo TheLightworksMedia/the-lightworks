@@ -22,19 +22,16 @@ import Layout from '../layouts/Layout.astro';
     <section class="first-photo-fullwidth" id="home">
       <div class="fullwidth-image-wrapper hero-slider">
         
-        <!-- Slide 1 -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/DSC02802-Insta.jpg" />
           <img class="active" src="/images/DSC08582-HDR-Export.jpg" alt="The Woodland Spa Estate" />
         </picture>
 
-        <!-- Slide 2 -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/DSC02803-Insta.jpg" />
           <img src="/images/DSC08537-HDR-Export.jpg" alt="The Concrete Horizon" />
         </picture>
 
-        <!-- Slide 3 -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/DSC02804-Insta.jpg" />
           <img src="/images/DSC08642-HDR-Export.jpg" alt="Spatial Fluidity" />
@@ -65,7 +62,14 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section class="video-break" id="video">
-      <div class="video-wrapper">
+      <div class="video-wrapper desktop-video">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="/videos/architectural-reel.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <div class="video-wrapper mobile-video">
         <video autoplay muted loop playsinline preload="auto">
           <source src="/videos/Wrenwood-Reel.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -202,23 +206,17 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <form class="luxury-form" action="https://api.web3forms.com/submit" method="POST">
-          
           <input type="hidden" name="access_key" value="d8c351b8-59e4-4c99-9236-ecd105a16121">
-          
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required />
           </div>
-          
           <div class="form-group">
             <input type="email" name="email" placeholder="Your Email Address" required />
           </div>
-          
           <div class="form-group">
             <textarea name="message" placeholder="Project Details & Location" rows="4" required></textarea>
           </div>
-          
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
           <button type="submit" class="submit-btn">Send Enquiry</button>
         </form>
         
@@ -261,7 +259,7 @@ import Layout from '../layouts/Layout.astro';
     box-sizing: border-box;
   }
 
-  /* Cinematic Video Break */
+  /* Cinematic Video Break - Desktop Styling */
   .video-break {
     width: 100vw;
     position: relative;
@@ -271,13 +269,21 @@ import Layout from '../layouts/Layout.astro';
     margin-right: -50vw;
     margin-top: -3.7rem;
     padding: 0;
+    background-color: var(--text-mahogany);
+    display: flex;
+    justify-content: center;
   }
 
-  .video-wrapper {
+  .desktop-video {
+    display: block; 
     width: 100%;
-    height: 80vh;
-    overflow: hidden;
+    height: 85vh; 
     position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-video {
+    display: none; 
   }
 
   .video-wrapper video {
@@ -596,6 +602,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .carousel-slide {
+    flex: 0 0 100%; 
     min-width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -783,7 +790,7 @@ import Layout from '../layouts/Layout.astro';
       white-space: nowrap !important;
     }
 
-    /* 3. Top Hero Section - Updated to 4:5 Aspect Ratio for Vertical Crops */
+    /* 3. Top Hero Section */
     .first-photo-fullwidth {
       margin-top: 130px !important;
       margin-bottom: 0 !important;
@@ -798,7 +805,6 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 0 !important;
     }
 
-    /* FULL WIDTH LINE: Underneath the Hero Image */
     .caption-centered {
       width: 100vw !important;
       position: relative !important;
@@ -811,7 +817,7 @@ import Layout from '../layouts/Layout.astro';
       height: 0 !important;
     }
 
-    /* 4. UNIFIED SECTION TITLES: About, Services, Portfolio, Contact */
+    /* 4. UNIFIED SECTION TITLES */
     .vertical-layout .content-side h2,
     .services-section .text-container.centered h2,
     .portfolio-carousel-section .text-container.centered h2,
@@ -827,7 +833,7 @@ import Layout from '../layouts/Layout.astro';
       width: 100% !important;
     }
 
-    /* 5. About Section - Centered Heading & Grid Alignment */
+    /* 5. About Section */
     .image-break {
       padding: 0 1rem !important;
       margin: 0 !important;
@@ -882,7 +888,6 @@ import Layout from '../layouts/Layout.astro';
       margin-top: 0 !important;
     }
 
-    /* FULL WIDTH LINE: Between About & Video */
     .vertical-layout .full-width-divider {
       grid-column: 1 / -1 !important;
       width: 100vw !important;
@@ -898,7 +903,7 @@ import Layout from '../layouts/Layout.astro';
       height: 0 !important;
     }
 
-    /* 6. Video Break - Updated to 9:16 Aspect Ratio */
+    /* 6. Video Break - MOBILE FIX */
     .video-break {
       width: 100vw !important;
       position: relative !important;
@@ -910,13 +915,18 @@ import Layout from '../layouts/Layout.astro';
       margin-bottom: 1.5rem !important; 
       padding-bottom: 1.5rem !important;
       border-bottom: 1px solid var(--border-mahogany) !important;
+      display: block !important; 
     }
     
-    .video-wrapper {
+    .desktop-video {
+      display: none !important; 
+    }
+
+    .mobile-video {
+      display: block !important; 
+      width: 100% !important; 
+      height: auto !important; 
       aspect-ratio: 9 / 16 !important;
-      height: auto !important;
-      min-height: 0 !important;
-      max-height: none !important;
       margin: 0 !important;
       padding: 0 !important;
     }
@@ -961,7 +971,7 @@ import Layout from '../layouts/Layout.astro';
       transform: translateY(0) !important;
     }
 
-    /* 8. Portfolio Carousel - Reduced Whitespace & Vertical Images */
+    /* 8. Portfolio Carousel */
     .portfolio-carousel-section {
       padding: 1.5rem 0 2rem 0 !important;
     }
@@ -1057,7 +1067,7 @@ import Layout from '../layouts/Layout.astro';
     const wrapper = document.querySelector('.hero-slider');
     if (!wrapper) return;
 
-    const slides = wrapper.querySelectorAll('picture img, > img');
+    const slides = wrapper.querySelectorAll('img');
     let currentIndex = 0;
 
     if (slides.length <= 1) return;
@@ -1077,15 +1087,42 @@ import Layout from '../layouts/Layout.astro';
     const track = document.querySelector('.carousel-track');
     if (!track) return;
     
-    const slides = Array.from(track.children);
+    // Grab only the original slides
+    const originalSlides = Array.from(track.querySelectorAll('.carousel-slide:not(.clone)'));
     const nextBtn = document.querySelector('.next-arrow');
     const prevBtn = document.querySelector('.prev-arrow');
     
-    let currentIndex = 0;
+    if (originalSlides.length <= 1) return;
 
-    if (slides.length <= 1) return;
+    // Check if clones already exist so we don't duplicate them
+    let firstClone = track.querySelector('.clone.first');
+    let lastClone = track.querySelector('.clone.last');
 
-    function updateSlidePosition() {
+    if (!firstClone && !lastClone) {
+      firstClone = originalSlides[0].cloneNode(true);
+      lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+      
+      firstClone.classList.add('clone', 'first');
+      lastClone.classList.add('clone', 'last');
+      
+      track.appendChild(firstClone);
+      track.insertBefore(lastClone, originalSlides[0]);
+    }
+    
+    // Refresh the array to include our new clones
+    const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+    
+    // Start at index 1 because index 0 is the newly added lastClone
+    let currentIndex = 1;
+    let isTransitioning = false;
+
+    function updateSlidePosition(smooth = true) {
+      if (smooth) {
+        track.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      } else {
+        track.style.transition = 'none';
+      }
+
       slides.forEach((slide, idx) => {
         if (idx === currentIndex) {
           slide.classList.add('active');
@@ -1093,29 +1130,68 @@ import Layout from '../layouts/Layout.astro';
           slide.classList.remove('active');
         }
       });
-      const slideWidth = slides[0].getBoundingClientRect().width;
+
+      // THE FIX: Use .offsetWidth which ignores the 95% scale effect 
+      // to calculate the exact, raw width of the layout block.
+      const slideWidth = slides[0].offsetWidth;
       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
 
     function nextSlide() {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlidePosition();
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex++;
+      updateSlidePosition(true);
     }
 
     function prevSlide() {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlidePosition();
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex--;
+      updateSlidePosition(true);
     }
 
+    // Listen for the slide transition to finish for the infinite loop
+    track.addEventListener('transitionend', (e) => {
+      // Ensure we are tracking the main wrapper box
+      if (e.target !== track) return; 
+      
+      isTransitioning = false;
+      
+      if (slides[currentIndex] === firstClone || slides[currentIndex] === lastClone) {
+        // Temporarily disable slide transitions to prevent sudden flashing
+        slides.forEach(s => s.style.transition = 'none');
+        
+        if (slides[currentIndex] === firstClone) {
+          currentIndex = 1; // Seamlessly jump to the REAL first slide
+        } else if (slides[currentIndex] === lastClone) {
+          currentIndex = slides.length - 2; // Seamlessly jump to the REAL last slide
+        }
+        
+        updateSlidePosition(false);
+        
+        // Force the browser to register the instant DOM change
+        track.offsetHeight; 
+        
+        // Restore CSS transitions
+        slides.forEach(s => s.style.transition = '');
+      }
+    });
+
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+      // Replace existing button clones to prevent stacking event listeners
+      const newNextBtn = nextBtn.cloneNode(true);
+      nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
+      newNextBtn.addEventListener('click', () => {
         nextSlide();
         resetTimer();
       });
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
+      const newPrevBtn = prevBtn.cloneNode(true);
+      prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
+      newPrevBtn.addEventListener('click', () => {
         prevSlide();
         resetTimer();
       });
@@ -1135,8 +1211,20 @@ import Layout from '../layouts/Layout.astro';
     }
 
     startTimer();
-    window.addEventListener('resize', updateSlidePosition);
-    updateSlidePosition();
+    
+    window.addEventListener('resize', () => {
+      // Ensure smooth resizing without snapping
+      slides.forEach(s => s.style.transition = 'none');
+      updateSlidePosition(false);
+      track.offsetHeight;
+      slides.forEach(s => s.style.transition = '');
+    });
+    
+    // Initialize without animation to start on Index 1 instantly
+    slides.forEach(s => s.style.transition = 'none');
+    updateSlidePosition(false);
+    track.offsetHeight;
+    slides.forEach(s => s.style.transition = '');
   }
 
   function initAll() {
