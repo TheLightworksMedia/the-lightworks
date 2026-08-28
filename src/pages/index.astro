@@ -22,19 +22,34 @@ import Layout from '../layouts/Layout.astro';
     <section class="first-photo-fullwidth" id="home">
       <div class="fullwidth-image-wrapper hero-slider">
         
+        <!-- Slide 1 -->
         <picture>
-          <source media="(max-width: 768px)" srcset="/images/DSC02802-Insta.jpg" />
-          <img class="active" src="/images/DSC08582-HDR-Export.jpg" alt="The Woodland Spa Estate" />
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_001.JPG" />
+          <img class="active" src="/images/Main/Main_2000p_001.JPG" alt="The Lightworks Architectural 1" />
         </picture>
 
+        <!-- Slide 2 -->
         <picture>
-          <source media="(max-width: 768px)" srcset="/images/DSC02803-Insta.jpg" />
-          <img src="/images/DSC08537-HDR-Export.jpg" alt="The Concrete Horizon" />
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_002.JPG" />
+          <img src="/images/Main/Main_2000p_002.JPG" alt="The Lightworks Architectural 2" />
         </picture>
 
+        <!-- Slide 3 -->
         <picture>
-          <source media="(max-width: 768px)" srcset="/images/DSC02804-Insta.jpg" />
-          <img src="/images/DSC08642-HDR-Export.jpg" alt="Spatial Fluidity" />
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_003.JPG" />
+          <img src="/images/Main/Main_2000p_003.JPG" alt="The Lightworks Architectural 3" />
+        </picture>
+
+        <!-- Slide 4 (Custom 95% positioning: crops bottom 5%, rest from top) -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_004.JPG" />
+          <img src="/images/Main/Main_2000p_004.JPG" alt="The Lightworks Architectural 4" style="object-position: center 95% !important;" />
+        </picture>
+
+        <!-- Slide 5 -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_005.JPG" />
+          <img src="/images/Main/Main_2000p_005.JPG" alt="The Lightworks Architectural 5" />
         </picture>
 
       </div>
@@ -62,6 +77,7 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section class="video-break" id="video">
+      <!-- DESKTOP HORIZONTAL VIDEO (Hidden on Mobile) -->
       <div class="video-wrapper desktop-video">
         <video autoplay muted loop playsinline preload="auto">
           <source src="/videos/architectural-reel.mp4" type="video/mp4" />
@@ -69,6 +85,7 @@ import Layout from '../layouts/Layout.astro';
         </video>
       </div>
       
+      <!-- MOBILE VERTICAL VIDEO (Hidden on Desktop) -->
       <div class="video-wrapper mobile-video">
         <video autoplay muted loop playsinline preload="auto">
           <source src="/videos/Wrenwood-Reel.mp4" type="video/mp4" />
@@ -85,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="services-grid-2x4">
         <div class="service-tile">
-          <img src="/images/DSC08582-HDR-Export.jpg" alt="Architectural Photography" />
+          <img src="/images/Grid/Grid_900p_001.JPG" alt="Architectural Photography" />
           <div class="tile-overlay">
             <h3>Photography</h3>
             <p class="tile-description">Meticulously composed stills emphasizing texture, spatial flow, and natural daylight.</p>
@@ -93,7 +110,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/DSC08537-HDR-Export.jpg" alt="Architectural Videography" />
+          <img src="/images/Grid/Grid_900p_002.JPG" alt="Architectural Videography" />
           <div class="tile-overlay">
             <h3>Videography</h3>
             <p class="tile-description">Cinematic walkthroughs highlighting the true atmosphere and flow of luxury spaces.</p>
@@ -101,7 +118,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/DSC08642-HDR-Export.jpg" alt="Drone Media" />
+          <img src="/images/Grid/Grid_900p_003.JPG" alt="Drone Media" />
           <div class="tile-overlay">
             <h3>Drone</h3>
             <p class="tile-description">Elevated aerial views showcasing the property layout and surrounding landscape context.</p>
@@ -109,7 +126,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/DSC08785-HDR-Export.jpg" alt="Floorplans" />
+          <img src="/images/Grid/Grid_900p_004.JPG" alt="Floorplans" />
           <div class="tile-overlay">
             <h3>Floorplans</h3>
             <p class="tile-description">Precise, professional 2D and 3D schematics mapping accurate spatial dimensions.</p>
@@ -117,7 +134,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/DSC08930-HDR-Export.jpg" alt="360 Tours" />
+          <img src="/images/Grid/Grid_900p_005.JPG" alt="360 Tours" />
           <div class="tile-overlay">
             <h3>360 Tours</h3>
             <p class="tile-description">Interactive digital environments allowing seamless remote exploration of the property.</p>
@@ -125,7 +142,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/DSC08975-HDR-Export.jpg" alt="Social Media Content" />
+          <img src="/images/Grid/Grid_900p_006.JPG" alt="Social Media Content" />
           <div class="tile-overlay">
             <h3>Social Media</h3>
             <p class="tile-description">Engaging, short-form visual content optimized for digital marketing and high-end reach.</p>
@@ -133,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/YOUR_AIRBNB_IMAGE.jpg" alt="Short-Term Rental Photography" />
+          <img src="/images/Grid/Grid_900p_007.JPG" alt="Short-Term Rental Photography" />
           <div class="tile-overlay">
             <h3>Short-Term Rentals</h3>
             <p class="tile-description">High-impact imagery designed to capture attention, maximize bookings, and elevate your listing.</p>
@@ -141,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
 
         <div class="service-tile">
-          <img src="/images/YOUR_COMMERCIAL_IMAGE.jpg" alt="Commercial Space Photography" />
+          <img src="/images/Grid/Grid_900p_008.JPG" alt="Commercial Space Photography" />
           <div class="tile-overlay">
             <h3>Commercial Spaces</h3>
             <p class="tile-description">Bespoke visual content for restaurants, clinics, and retail venues to strengthen your brand identity.</p>
@@ -163,29 +180,71 @@ import Layout from '../layouts/Layout.astro';
             
             <div class="carousel-slide active">
               <picture>
-                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0001.JPG" />
-                <img src="/images/DSC08587-HDR-Export.jpg" alt="Penthouse Proportion" />
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_001.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_001.JPG" alt="Portfolio Work 1" />
               </picture>
             </div>
             
             <div class="carousel-slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0002.JPG" />
-                <img src="/images/DSC08763-HDR-Export.jpg" alt="Diffused Light" />
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_002.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_002.JPG" alt="Portfolio Work 2" />
               </picture>
             </div>
             
             <div class="carousel-slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0003.JPG" />
-                <img src="/images/DSC08868-HDR-Export.jpg" alt="Textural Harmony" />
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_003.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_003.JPG" alt="Portfolio Work 3" />
               </picture>
             </div>
             
             <div class="carousel-slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="/images/3_Woodford_Green_Insta_0004.JPG" />
-                <img src="/images/DSC08990-HDR-Export.jpg" alt="Evening Atmosphere" />
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_004.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_004.JPG" alt="Portfolio Work 4" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_005.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_005.JPG" alt="Portfolio Work 5" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_006.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_006.JPG" alt="Portfolio Work 6" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_007.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_007.JPG" alt="Portfolio Work 7" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_008.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_008.JPG" alt="Portfolio Work 8" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_009.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_009.JPG" alt="Portfolio Work 9" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_010.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_010.JPG" alt="Portfolio Work 10" />
               </picture>
             </div>
 
@@ -1080,21 +1139,19 @@ import Layout from '../layouts/Layout.astro';
       slides[currentIndex].classList.remove('active');
       currentIndex = (currentIndex + 1) % slides.length;
       slides[currentIndex].classList.add('active');
-    }, 4000);
+    }, 3000);
   }
 
   function initPortfolioCarousel() {
     const track = document.querySelector('.carousel-track');
     if (!track) return;
     
-    // Grab only the original slides
     const originalSlides = Array.from(track.querySelectorAll('.carousel-slide:not(.clone)'));
     const nextBtn = document.querySelector('.next-arrow');
     const prevBtn = document.querySelector('.prev-arrow');
     
     if (originalSlides.length <= 1) return;
 
-    // Check if clones already exist so we don't duplicate them
     let firstClone = track.querySelector('.clone.first');
     let lastClone = track.querySelector('.clone.last');
 
@@ -1109,10 +1166,7 @@ import Layout from '../layouts/Layout.astro';
       track.insertBefore(lastClone, originalSlides[0]);
     }
     
-    // Refresh the array to include our new clones
     const slides = Array.from(track.querySelectorAll('.carousel-slide'));
-    
-    // Start at index 1 because index 0 is the newly added lastClone
     let currentIndex = 1;
     let isTransitioning = false;
 
@@ -1131,8 +1185,6 @@ import Layout from '../layouts/Layout.astro';
         }
       });
 
-      // THE FIX: Use .offsetWidth which ignores the 95% scale effect 
-      // to calculate the exact, raw width of the layout block.
       const slideWidth = slides[0].offsetWidth;
       track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
@@ -1151,35 +1203,26 @@ import Layout from '../layouts/Layout.astro';
       updateSlidePosition(true);
     }
 
-    // Listen for the slide transition to finish for the infinite loop
     track.addEventListener('transitionend', (e) => {
-      // Ensure we are tracking the main wrapper box
       if (e.target !== track) return; 
-      
       isTransitioning = false;
       
       if (slides[currentIndex] === firstClone || slides[currentIndex] === lastClone) {
-        // Temporarily disable slide transitions to prevent sudden flashing
         slides.forEach(s => s.style.transition = 'none');
         
         if (slides[currentIndex] === firstClone) {
-          currentIndex = 1; // Seamlessly jump to the REAL first slide
+          currentIndex = 1; 
         } else if (slides[currentIndex] === lastClone) {
-          currentIndex = slides.length - 2; // Seamlessly jump to the REAL last slide
+          currentIndex = slides.length - 2; 
         }
         
         updateSlidePosition(false);
-        
-        // Force the browser to register the instant DOM change
         track.offsetHeight; 
-        
-        // Restore CSS transitions
         slides.forEach(s => s.style.transition = '');
       }
     });
 
     if (nextBtn) {
-      // Replace existing button clones to prevent stacking event listeners
       const newNextBtn = nextBtn.cloneNode(true);
       nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
       newNextBtn.addEventListener('click', () => {
@@ -1198,7 +1241,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     function startTimer() {
-      portfolioCarouselTimer = setInterval(nextSlide, 4000);
+      portfolioCarouselTimer = setInterval(nextSlide, 2000);
     }
 
     function resetTimer() {
@@ -1213,14 +1256,12 @@ import Layout from '../layouts/Layout.astro';
     startTimer();
     
     window.addEventListener('resize', () => {
-      // Ensure smooth resizing without snapping
       slides.forEach(s => s.style.transition = 'none');
       updateSlidePosition(false);
       track.offsetHeight;
       slides.forEach(s => s.style.transition = '');
     });
     
-    // Initialize without animation to start on Index 1 instantly
     slides.forEach(s => s.style.transition = 'none');
     updateSlidePosition(false);
     track.offsetHeight;
