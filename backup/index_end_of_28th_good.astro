@@ -14,7 +14,6 @@ import Layout from '../layouts/Layout.astro';
         <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
         <a href="#services">SERVICES</a>
-        <a href="#packages">PACKAGES</a>
         <a href="#portfolio">PORTFOLIO</a>
         <a href="#contact">CONTACT</a>
       </nav>
@@ -35,10 +34,22 @@ import Layout from '../layouts/Layout.astro';
           <img src="/images/Main/Main_2000p_002.JPG" alt="The Lightworks Architectural 2" />
         </picture>
 
-        <!-- Slide 3 (Original 004) -->
+        <!-- Slide 3 -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_003.JPG" />
+          <img src="/images/Main/Main_2000p_003.JPG" alt="The Lightworks Architectural 3" />
+        </picture>
+
+        <!-- Slide 4 (Custom 95% positioning: crops bottom 5%, rest from top) -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_004.JPG" />
-          <img src="/images/Main/Main_2000p_004.JPG" alt="The Lightworks Architectural 3" style="object-position: center 95% !important;" />
+          <img src="/images/Main/Main_2000p_004.JPG" alt="The Lightworks Architectural 4" style="object-position: center 95% !important;" />
+        </picture>
+
+        <!-- Slide 5 -->
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_005.JPG" />
+          <img src="/images/Main/Main_2000p_005.JPG" alt="The Lightworks Architectural 5" />
         </picture>
 
       </div>
@@ -59,9 +70,6 @@ import Layout from '../layouts/Layout.astro';
         </p>
         <p class="body-text">
           Our approach is centered on natural light—how it enters, interacts with, and elevates spatial design. From high-resolution photography to immersive videography, we provide comprehensive media solutions tailored to your complete project needs.
-        </p>
-        <p class="body-text">
-          Based in Bristol, covering properties across the city and surrounding areas, and extending throughout the South West for larger projects.
         </p>
       </div>
 
@@ -159,58 +167,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <!-- PACKAGES SECTION -->
-    <section class="image-break vertical-layout packages-layout" id="packages">
-      <h2 class="desktop-full-title">PACKAGES</h2>
-      <div class="image-wrapper">
-        <img src="/images/Portfolio/Portfolio_1080p_001.JPG" alt="Packages and Strategy" />
-      </div>
-      <div class="content-side">
-        <p class="body-text packages-intro">
-          Every property possesses a distinct architectural narrative. We collaborate closely with you to curate a bespoke media strategy that highlights your space's character and maximizes market impact. Packages starting from £199.
-        </p>
-        
-        <div class="package-list">
-          <div class="package-item">
-            <h3>Essential</h3>
-            <ul>
-              <li>Interior & exterior photography (24-hour delivery)</li>
-              <li>Aerial drone photography</li>
-              <li>Precise 2D floorplan</li>
-            </ul>
-          </div>
-          
-          <div class="package-item">
-            <h3>Signature</h3>
-            <ul>
-              <li>Comprehensive photography package</li>
-              <li>Aerial drone media & architectural floorplan</li>
-              <li>Cinematic highlight video (gimbal & drone)</li>
-            </ul>
-          </div>
-          
-          <div class="package-item">
-            <h3>Extended</h3>
-            <ul>
-              <li>The complete Signature suite</li>
-              <li>Immersive 360° virtual tour</li>
-            </ul>
-          </div>
-
-          <div class="package-item">
-            <h3>Bespoke</h3>
-            <ul>
-              <li>Custom add-ons tailored to your requirements</li>
-              <li>Cinematic wide-format videography & dynamic vertical reels</li>
-              <li>Curated social media imagery</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="full-width-divider"></div>
-    </section>
-
     <section class="portfolio-carousel-section" id="portfolio">
       <div class="text-container centered">
         <h2>Portfolio</h2>
@@ -222,7 +178,6 @@ import Layout from '../layouts/Layout.astro';
         <div class="carousel-track-wrapper">
           <div class="carousel-track">
             
-            <!-- Slide 1: Mobile 001 / Desktop 001 -->
             <div class="carousel-slide active">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_001.JPG" />
@@ -230,7 +185,6 @@ import Layout from '../layouts/Layout.astro';
               </picture>
             </div>
             
-            <!-- Slide 2: Mobile 002 / Desktop 002 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_002.JPG" />
@@ -238,7 +192,6 @@ import Layout from '../layouts/Layout.astro';
               </picture>
             </div>
             
-            <!-- Slide 3: Mobile 003 / Desktop 003 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_003.JPG" />
@@ -246,43 +199,52 @@ import Layout from '../layouts/Layout.astro';
               </picture>
             </div>
             
-            <!-- Slide 4: Mobile 006 / Desktop 004 -->
             <div class="carousel-slide">
               <picture>
-                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_006.JPG" />
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_004.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_004.JPG" alt="Portfolio Work 4" />
               </picture>
             </div>
 
-            <!-- Slide 5: Mobile 007 / Desktop 006 -->
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_005.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_005.JPG" alt="Portfolio Work 5" />
+              </picture>
+            </div>
+
+            <div class="carousel-slide">
+              <picture>
+                <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_006.JPG" />
+                <img src="/images/Portfolio/Portfolio_2000p_006.JPG" alt="Portfolio Work 6" />
+              </picture>
+            </div>
+
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_007.JPG" />
-                <img src="/images/Portfolio/Portfolio_2000p_006.JPG" alt="Portfolio Work 5" />
+                <img src="/images/Portfolio/Portfolio_2000p_007.JPG" alt="Portfolio Work 7" />
               </picture>
             </div>
 
-            <!-- Slide 6: Mobile 008 / Desktop 008 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_008.JPG" />
-                <img src="/images/Portfolio/Portfolio_2000p_008.JPG" alt="Portfolio Work 6" />
+                <img src="/images/Portfolio/Portfolio_2000p_008.JPG" alt="Portfolio Work 8" />
               </picture>
             </div>
 
-            <!-- Slide 7: Mobile 009 / Desktop 009 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_009.JPG" />
-                <img src="/images/Portfolio/Portfolio_2000p_009.JPG" alt="Portfolio Work 7" />
+                <img src="/images/Portfolio/Portfolio_2000p_009.JPG" alt="Portfolio Work 9" />
               </picture>
             </div>
 
-            <!-- Slide 8: Mobile 010 / Desktop 010 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_010.JPG" />
-                <img src="/images/Portfolio/Portfolio_2000p_010.JPG" alt="Portfolio Work 8" />
+                <img src="/images/Portfolio/Portfolio_2000p_010.JPG" alt="Portfolio Work 10" />
               </picture>
             </div>
 
@@ -299,6 +261,7 @@ import Layout from '../layouts/Layout.astro';
         
         <div class="contact-details">
           <a href="mailto:enquiries@thelightworks.art" class="contact-email">enquiries@thelightworks.art</a>
+          <p class="contact-phone">+44 (0) 7376 940 650</p>
         </div>
 
         <form class="luxury-form" action="https://api.web3forms.com/submit" method="POST">
@@ -335,11 +298,6 @@ import Layout from '../layouts/Layout.astro';
     scroll-behavior: smooth;
     background-color: var(--bg-cream) !important;
     overflow-x: hidden;
-  }
-
-  /* OFFSET FOR FIXED HEADER SCROLLING (Desktop) */
-  section, footer {
-    scroll-margin-top: 80px; 
   }
 
   body {
@@ -552,7 +510,7 @@ import Layout from '../layouts/Layout.astro';
     width: calc(100% - 8rem);
   }
 
-  /* Flexbox Split Layout for About Section & Packages (Desktop) */
+  /* Flexbox Split Layout for About Section (Desktop) */
   .vertical-layout {
     display: flex;
     flex-wrap: wrap;
@@ -592,58 +550,6 @@ import Layout from '../layouts/Layout.astro';
     border-bottom: 1px solid var(--border-mahogany);
     width: 100%;
     margin-top: 2rem;
-  }
-
-  /* Packages Specific Adjustments */
-  .desktop-full-title {
-    flex: 0 0 100%;
-    width: 100%;
-    font-size: 2.5rem;
-    letter-spacing: 0.1em;
-    margin: 0 0 -2.5rem 0; 
-    font-weight: 300;
-    color: var(--text-mahogany);
-  }
-
-  .packages-layout {
-    padding-bottom: 4rem; 
-  }
-
-  .package-list {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .package-item h3 {
-    font-size: 1.35rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.4rem;
-    text-transform: uppercase;
-    color: var(--text-mahogany);
-  }
-
-  .package-item ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .package-item li {
-    font-size: 1.15rem;
-    color: var(--muted-mahogany);
-    margin-bottom: 0.4rem;
-    padding-left: 1.5rem;
-    position: relative;
-    font-weight: 400;
-  }
-
-  .package-item li::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: var(--text-mahogany);
   }
 
   /* 2x4 Services Section Layout */
@@ -834,6 +740,12 @@ import Layout from '../layouts/Layout.astro';
     opacity: 0.6;
   }
 
+  .contact-phone {
+    font-size: 1.2rem;
+    color: var(--muted-mahogany);
+    letter-spacing: 0.1em;
+  }
+
   .luxury-form {
     display: flex;
     flex-direction: column;
@@ -895,11 +807,6 @@ import Layout from '../layouts/Layout.astro';
       overflow-x: hidden !important;
       width: 100% !important;
       max-width: 100vw !important;
-    }
-
-    /* Offset fix for taller stacked mobile header */
-    section, footer {
-      scroll-margin-top: 115px; 
     }
 
     /* 2. Header - Forced Single Line Navigation */
@@ -971,7 +878,6 @@ import Layout from '../layouts/Layout.astro';
 
     /* 4. UNIFIED SECTION TITLES */
     .vertical-layout .content-side h2,
-    .desktop-full-title,
     .services-section .text-container.centered h2,
     .portfolio-carousel-section .text-container.centered h2,
     .footer-section .text-container.centered h2 {
@@ -986,7 +892,7 @@ import Layout from '../layouts/Layout.astro';
       width: 100% !important;
     }
 
-    /* 5. Mobile Side-by-Side 55%/40% Reversion for Split Sections */
+    /* 5. About Section */
     .image-break {
       padding: 0 1rem !important;
       margin: 0 !important;
@@ -1041,49 +947,6 @@ import Layout from '../layouts/Layout.astro';
       margin-top: 0 !important;
     }
 
-    /* Packages Specific Layout Override for Mobile Intro Text & List Position */
-    #packages.vertical-layout .desktop-full-title {
-      grid-row: 1 !important;
-    }
-
-    #packages.vertical-layout .packages-intro {
-      grid-column: 1 / -1 !important;
-      grid-row: 2 !important;
-      text-align: center !important;
-      margin-bottom: 2rem !important;
-      padding: 0 0.5rem !important;
-    }
-
-    #packages.vertical-layout .image-wrapper {
-      grid-row: 3 / 10 !important;
-      margin-top: 3.5rem !important; /* Pushes the image down slightly to center vertically against the text */
-    }
-
-    #packages.vertical-layout .package-list {
-      grid-column: 2 !important;
-      grid-row: 3 / 10 !important;
-      margin-top: 0 !important;
-      gap: 0.75rem !important;
-      display: flex !important;
-      flex-direction: column !important;
-    }
-
-    .package-item h3 {
-      font-size: 0.85rem !important;
-      margin-bottom: 0.2rem !important;
-    }
-
-    .package-item li {
-      font-size: 0.7rem !important;
-      line-height: 1.25 !important;
-      margin-bottom: 0.2rem !important;
-      padding-left: 0.6rem !important;
-    }
-
-    .package-item li::before {
-      content: "-";
-    }
-
     .vertical-layout .full-width-divider {
       grid-column: 1 / -1 !important;
       width: 100vw !important;
@@ -1109,7 +972,7 @@ import Layout from '../layouts/Layout.astro';
       margin-right: -50vw !important;
       margin-top: 0 !important;
       margin-bottom: 1.5rem !important; 
-      padding-bottom: 0 !important; /* FIXED: Removed the bottom padding to eliminate the black space under video */
+      padding-bottom: 1.5rem !important;
       border-bottom: 1px solid var(--border-mahogany) !important;
       display: block !important; 
     }
@@ -1231,6 +1094,10 @@ import Layout from '../layouts/Layout.astro';
     .contact-email {
       font-size: 1.1rem !important;
       margin-bottom: 0.25rem !important;
+    }
+
+    .contact-phone {
+      font-size: 0.85rem !important;
     }
 
     .luxury-form {
