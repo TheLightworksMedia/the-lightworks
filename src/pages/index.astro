@@ -166,8 +166,9 @@ import Layout from '../layouts/Layout.astro';
         <img src="/images/Portfolio/Portfolio_1080p_001.JPG" alt="Packages and Strategy" />
       </div>
       <div class="content-side">
+        <!-- Text wrap and non-breaking space added below -->
         <p class="body-text packages-intro">
-          Every property possesses a distinct architectural narrative. We collaborate closely with you to curate a bespoke media strategy that highlights your space's character and maximizes market impact. Packages starting from £199.
+          Every property possesses a distinct architectural narrative. We collaborate closely with you to curate a bespoke media strategy that highlights your space's character and maximizes market impact. Packages starting from&nbsp;£199.
         </p>
         
         <div class="package-list">
@@ -481,6 +482,10 @@ import Layout from '../layouts/Layout.astro';
     color: var(--muted-mahogany);
     font-weight: 400;
     margin: 2rem 0;
+  }
+
+  .packages-intro {
+    text-wrap: pretty; /* Typographic balance: prevents single word orphans on desktop */
   }
 
   .text-container.centered {
@@ -1051,12 +1056,14 @@ import Layout from '../layouts/Layout.astro';
       grid-row: 2 !important;
       text-align: center !important;
       margin-bottom: 2rem !important;
-      padding: 0 0.5rem !important;
+      padding: 0 1rem !important;
+      text-wrap: balance !important; /* Perfect block balancing for mobile text */
     }
 
     #packages.vertical-layout .image-wrapper {
       grid-row: 3 / 10 !important;
-      margin-top: 3.5rem !important; /* Pushes the image down slightly to center vertically against the text */
+      align-self: center !important; /* Automatically perfectly centers it vertically alongside the text */
+      margin-top: 0 !important;
     }
 
     #packages.vertical-layout .package-list {
@@ -1109,7 +1116,7 @@ import Layout from '../layouts/Layout.astro';
       margin-right: -50vw !important;
       margin-top: 0 !important;
       margin-bottom: 1.5rem !important; 
-      padding-bottom: 0 !important; /* FIXED: Removed the bottom padding to eliminate the black space under video */
+      padding-bottom: 0 !important; /* FIXED: Removed padding */
       border-bottom: 1px solid var(--border-mahogany) !important;
       display: block !important; 
     }
