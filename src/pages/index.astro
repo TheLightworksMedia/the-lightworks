@@ -5,49 +5,26 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="The Lightworks | Editorial Portfolio">
   <div class="page-wrapper">
     
-    <header class="site-nav-header">
-      <div class="nav-brand">
-        <span class="brand-title">THE LIGHTWORKS</span>
-        <span class="brand-subtitle">ARCHITECTURAL & REAL ESTATE MEDIA</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#services">SERVICES</a>
-        <a href="#packages">PACKAGES</a>
-        <a href="#portfolio">PORTFOLIO</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
-    </header>
-
+    <!-- Hero Slider -->
     <section class="first-photo-fullwidth" id="home">
       <div class="fullwidth-image-wrapper hero-slider">
-        
-        <!-- Slide 1 -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_001.JPG" />
           <img class="active" src="/images/Main/Main_2000p_001.JPG" alt="The Lightworks Architectural 1" />
         </picture>
-
-        <!-- Slide 2 -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_002.JPG" />
           <img src="/images/Main/Main_2000p_002.JPG" alt="The Lightworks Architectural 2" />
         </picture>
-
-        <!-- Slide 3 (Original 004) -->
         <picture>
           <source media="(max-width: 768px)" srcset="/images/Main/Main_1080p_004.JPG" />
           <img src="/images/Main/Main_2000p_004.JPG" alt="The Lightworks Architectural 3" style="object-position: center 95% !important;" />
         </picture>
-
       </div>
-
-      <div class="caption-centered">
-          &nbsp;
-      </div>
+      <div class="caption-centered">&nbsp;</div>
     </section>
 
+    <!-- About -->
     <section class="image-break vertical-layout" id="about">
       <div class="image-wrapper">
         <img src="/images/DSC08975-HDR-Export.jpg" alt="Minimalist Interior Volume" />
@@ -64,28 +41,24 @@ import Layout from '../layouts/Layout.astro';
           Based in Bristol, covering properties across the city and surrounding areas, and extending throughout the South West for larger projects.
         </p>
       </div>
-
       <div class="full-width-divider"></div>
     </section>
 
+    <!-- Video Break -->
     <section class="video-break" id="video">
-      <!-- DESKTOP HORIZONTAL VIDEO (Hidden on Mobile) -->
       <div class="video-wrapper desktop-video">
         <video autoplay muted loop playsinline preload="auto">
           <source src="/videos/Web_wide.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
-      
-      <!-- MOBILE VERTICAL VIDEO (Hidden on Desktop) -->
       <div class="video-wrapper mobile-video">
         <video autoplay muted loop playsinline preload="auto">
           <source src="/videos/Web_vertical.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
     </section>
 
+    <!-- Services -->
     <section class="services-section" id="services">
       <div class="text-container centered">
         <h2>Services</h2>
@@ -93,84 +66,82 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="services-grid-2x4">
-        <div class="service-tile">
+        <a href="/photography" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_001.JPG" alt="Architectural Photography" />
           <div class="tile-overlay">
             <h3>Photography</h3>
             <p class="tile-description">Meticulously composed stills emphasizing texture, spatial flow, and natural daylight.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/videography" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_002.JPG" alt="Architectural Videography" />
           <div class="tile-overlay">
             <h3>Videography</h3>
             <p class="tile-description">Cinematic walkthroughs highlighting the true atmosphere and flow of luxury spaces.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/drone-media" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_003.JPG" alt="Drone Media" />
           <div class="tile-overlay">
             <h3>Drone</h3>
             <p class="tile-description">Elevated aerial views showcasing the property layout and surrounding landscape context.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/floorplans" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_004.JPG" alt="Floorplans" />
           <div class="tile-overlay">
             <h3>Floorplans</h3>
             <p class="tile-description">Precise, professional 2D and 3D schematics mapping accurate spatial dimensions.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/360-tours" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_005.JPG" alt="360 Tours" />
           <div class="tile-overlay">
             <h3>360 Tours</h3>
             <p class="tile-description">Interactive digital environments allowing seamless remote exploration of the property.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/social-media" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_006.JPG" alt="Social Media Content" />
           <div class="tile-overlay">
             <h3>Social Media</h3>
             <p class="tile-description">Engaging, short-form visual content optimized for digital marketing and high-end reach.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/short-term-rentals" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_007.JPG" alt="Short-Term Rental Photography" />
           <div class="tile-overlay">
             <h3>Short-Term Rentals</h3>
             <p class="tile-description">High-impact imagery designed to capture attention, maximize bookings, and elevate your listing.</p>
           </div>
-        </div>
+        </a>
 
-        <div class="service-tile">
+        <a href="/commercial-spaces" class="service-tile" style="display: block; text-decoration: none;">
           <img src="/images/Grid/Grid_900p_008.JPG" alt="Commercial Space Photography" />
           <div class="tile-overlay">
             <h3>Commercial Spaces</h3>
             <p class="tile-description">Bespoke visual content for restaurants, clinics, and retail venues to strengthen your brand identity.</p>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
-    <!-- PACKAGES SECTION -->
+    <!-- Packages -->
     <section class="image-break vertical-layout packages-layout" id="packages">
       <h2 class="desktop-full-title">PACKAGES</h2>
       <div class="image-wrapper">
         <img src="/images/Portfolio/Portfolio_1080p_001.JPG" alt="Packages and Strategy" />
       </div>
       <div class="content-side">
-        <!-- Text wrap and non-breaking space added below -->
         <p class="body-text packages-intro">
           Every property possesses a distinct architectural narrative. We collaborate closely with you to curate a bespoke media strategy that highlights your space's character and maximizes market impact. Packages starting from&nbsp;£199.
         </p>
-        
         <div class="package-list">
           <div class="package-item">
             <h3>Essential</h3>
@@ -180,7 +151,6 @@ import Layout from '../layouts/Layout.astro';
               <li>Precise 2D floorplan</li>
             </ul>
           </div>
-          
           <div class="package-item">
             <h3>Signature</h3>
             <ul>
@@ -189,7 +159,6 @@ import Layout from '../layouts/Layout.astro';
               <li>Cinematic highlight video (gimbal & drone)</li>
             </ul>
           </div>
-          
           <div class="package-item">
             <h3>Extended</h3>
             <ul>
@@ -197,7 +166,6 @@ import Layout from '../layouts/Layout.astro';
               <li>Immersive 360° virtual tour</li>
             </ul>
           </div>
-
           <div class="package-item">
             <h3>Bespoke</h3>
             <ul>
@@ -208,100 +176,81 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
       </div>
-
       <div class="full-width-divider"></div>
     </section>
 
+    <!-- Portfolio -->
     <section class="portfolio-carousel-section" id="portfolio">
       <div class="text-container centered">
         <h2>Portfolio</h2>
         <p class="subtitle italic">Selected architectural and Real Estate work</p>
       </div>
-
       <div class="carousel-container">
         <button class="carousel-arrow prev-arrow" aria-label="Previous slide">&#10094;</button>
         <div class="carousel-track-wrapper">
           <div class="carousel-track">
-            
-            <!-- Slide 1: Mobile 001 / Desktop 001 -->
             <div class="carousel-slide active">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_001.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_001.JPG" alt="Portfolio Work 1" />
               </picture>
             </div>
-            
-            <!-- Slide 2: Mobile 002 / Desktop 002 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_002.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_002.JPG" alt="Portfolio Work 2" />
               </picture>
             </div>
-            
-            <!-- Slide 3: Mobile 003 / Desktop 003 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_003.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_003.JPG" alt="Portfolio Work 3" />
               </picture>
             </div>
-            
-            <!-- Slide 4: Mobile 006 / Desktop 004 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_006.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_004.JPG" alt="Portfolio Work 4" />
               </picture>
             </div>
-
-            <!-- Slide 5: Mobile 007 / Desktop 006 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_007.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_006.JPG" alt="Portfolio Work 5" />
               </picture>
             </div>
-
-            <!-- Slide 6: Mobile 008 / Desktop 008 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_008.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_008.JPG" alt="Portfolio Work 6" />
               </picture>
             </div>
-
-            <!-- Slide 7: Mobile 009 / Desktop 009 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_009.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_009.JPG" alt="Portfolio Work 7" />
               </picture>
             </div>
-
-            <!-- Slide 8: Mobile 010 / Desktop 010 -->
             <div class="carousel-slide">
               <picture>
                 <source media="(max-width: 768px)" srcset="/images/Portfolio/Portfolio_1080p_010.JPG" />
                 <img src="/images/Portfolio/Portfolio_2000p_010.JPG" alt="Portfolio Work 8" />
               </picture>
             </div>
-
           </div>
         </div>
         <button class="carousel-arrow next-arrow" aria-label="Next slide">&#10095;</button>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer-section" id="contact">
       <div class="text-container centered">
         <h2>Contact</h2>
         <p class="subtitle italic">Connect with us through the channels below or submit your details via the form.</p>
-        
         <div class="contact-details">
           <a href="mailto:enquiries@thelightworks.art" class="contact-email">enquiries@thelightworks.art</a>
         </div>
-
         <form class="luxury-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="d8c351b8-59e4-4c99-9236-ecd105a16121">
           <div class="form-group">
@@ -316,7 +265,6 @@ import Layout from '../layouts/Layout.astro';
           <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
           <button type="submit" class="submit-btn">Send Enquiry</button>
         </form>
-        
         <p class="copyright">&copy; 2026 The Lightworks. All Rights Reserved.</p>
       </div>
     </footer>
@@ -325,135 +273,13 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  :root {
-    --bg-cream: #F9F6F0;
-    --text-mahogany: #241A16;
-    --muted-mahogany: #63524A;
-    --border-mahogany: rgba(36, 26, 22, 0.15);
-  }
-
-  html {
-    scroll-behavior: smooth;
-    background-color: var(--bg-cream) !important;
-    overflow-x: hidden;
-  }
-
-  /* OFFSET FOR FIXED HEADER SCROLLING (Desktop) */
-  section, footer {
-    scroll-margin-top: 80px; 
-  }
-
-  body {
-    background-color: var(--bg-cream) !important;
-    color: var(--text-mahogany) !important;
-    font-family: 'Cormorant Garamond', serif !important;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
-    position: relative;
-    -webkit-font-smoothing: antialiased;
-  }
-
+  /* Local Index Styles (excluding global header CSS) */
   .page-wrapper {
     width: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
   }
 
-  /* Cinematic Video Break - Desktop Styling */
-  .video-break {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    margin-top: -3.7rem;
-    padding: 0;
-    background-color: var(--text-mahogany);
-    display: flex;
-    justify-content: center;
-  }
-
-  .desktop-video {
-    display: block; 
-    width: 100%;
-    height: 85vh; 
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mobile-video {
-    display: none; 
-  }
-
-  .video-wrapper video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-  }
-
-  /* Fixed Navigation Header */
-  .site-nav-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.1rem 4rem;
-    background-color: var(--bg-cream);
-    border-bottom: 1px solid var(--border-mahogany);
-    box-sizing: border-box;
-  }
-
-  .nav-brand {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .brand-title {
-    font-size: 1.5rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-weight: 400;
-    line-height: 1;
-  }
-
-  .brand-subtitle {
-    font-size: 0.65rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--muted-mahogany);
-    margin-top: 0.35rem;
-    display: block;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2.5rem;
-  }
-
-  .nav-links a {
-    color: var(--text-mahogany);
-    text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    transition: opacity 0.3s ease;
-  }
-
-  .nav-links a:hover {
-    opacity: 0.6;
-  }
-
-  /* Typography Fundamentals */
   h1, h2, h3 {
     font-weight: 300;
     color: var(--text-mahogany);
@@ -484,9 +310,7 @@ import Layout from '../layouts/Layout.astro';
     margin: 2rem 0;
   }
 
-  .packages-intro {
-    text-wrap: pretty; /* Typographic balance: prevents single word orphans on desktop */
-  }
+  .packages-intro { text-wrap: pretty; }
 
   .text-container.centered {
     max-width: 800px;
@@ -500,7 +324,6 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
   }
 
-  /* Full-Width Top Hero Slider Styling */
   .first-photo-fullwidth {
     width: 100%;
     margin-top: 95px;
@@ -534,7 +357,6 @@ import Layout from '../layouts/Layout.astro';
     z-index: 2;
   }
 
-  /* General Image Layout Settings */
   .image-break {
     width: 100%;
     max-width: 1600px;
@@ -543,7 +365,6 @@ import Layout from '../layouts/Layout.astro';
     box-sizing: border-box;
   }
 
-  /* Captions */
   .caption-centered {
     display: flex;
     justify-content: space-between;
@@ -557,7 +378,6 @@ import Layout from '../layouts/Layout.astro';
     width: calc(100% - 8rem);
   }
 
-  /* Flexbox Split Layout for About Section & Packages (Desktop) */
   .vertical-layout {
     display: flex;
     flex-wrap: wrap;
@@ -599,7 +419,38 @@ import Layout from '../layouts/Layout.astro';
     margin-top: 2rem;
   }
 
-  /* Packages Specific Adjustments */
+  .video-break {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: -3.7rem;
+    padding: 0;
+    background-color: var(--text-mahogany);
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop-video {
+    display: block; 
+    width: 100%;
+    height: 85vh; 
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mobile-video { display: none; }
+
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
   .desktop-full-title {
     flex: 0 0 100%;
     width: 100%;
@@ -610,9 +461,7 @@ import Layout from '../layouts/Layout.astro';
     color: var(--text-mahogany);
   }
 
-  .packages-layout {
-    padding-bottom: 4rem; 
-  }
+  .packages-layout { padding-bottom: 4rem; }
 
   .package-list {
     margin-top: 2.5rem;
@@ -651,7 +500,6 @@ import Layout from '../layouts/Layout.astro';
     color: var(--text-mahogany);
   }
 
-  /* 2x4 Services Section Layout */
   .services-section {
     padding: 2rem 2rem;
     max-width: 1200px;
@@ -716,20 +564,10 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 300;
   }
 
-  .service-tile:hover img {
-    transform: scale(1.03);
-  }
+  .service-tile:hover img { transform: scale(1.03); }
+  .service-tile:hover .tile-overlay { background: linear-gradient(to top, rgba(36, 26, 22, 0.95) 20%, rgba(36, 26, 22, 0.5) 80%, rgba(36, 26, 22, 0.3) 100%); }
+  .service-tile:hover .tile-description { opacity: 1; transform: translateY(0); }
 
-  .service-tile:hover .tile-overlay {
-    background: linear-gradient(to top, rgba(36, 26, 22, 0.95) 20%, rgba(36, 26, 22, 0.5) 80%, rgba(36, 26, 22, 0.3) 100%);
-  }
-
-  .service-tile:hover .tile-description {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Portfolio Carousel Styles */
   .portfolio-carousel-section {
     padding: 1rem 0 2rem 0;
     border-bottom: 1px solid var(--border-mahogany);
@@ -806,25 +644,16 @@ import Layout from '../layouts/Layout.astro';
     color: var(--bg-cream);
   }
 
-  .prev-arrow {
-    left: 2rem;
-  }
+  .prev-arrow { left: 2rem; }
+  .next-arrow { right: 2rem; }
 
-  .next-arrow {
-    right: 2rem;
-  }
-
-  /* Footer / Contact */
   .footer-section {
     padding: 2rem 2rem 6rem 2rem;
     background-color: #F2EFE9;
     margin-top: 2rem;
   }
 
-  .contact-details {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
+  .contact-details { margin-top: 1.5rem; margin-bottom: 1.5rem; }
 
   .contact-email {
     font-size: 2rem;
@@ -835,9 +664,7 @@ import Layout from '../layouts/Layout.astro';
     transition: opacity 0.3s;
   }
 
-  .contact-email:hover {
-    opacity: 0.6;
-  }
+  .contact-email:hover { opacity: 0.6; }
 
   .luxury-form {
     display: flex;
@@ -880,9 +707,7 @@ import Layout from '../layouts/Layout.astro';
     transition: opacity 0.3s;
   }
 
-  .submit-btn:hover {
-    opacity: 0.8;
-  }
+  .submit-btn:hover { opacity: 0.8; }
 
   .copyright {
     font-size: 0.85rem;
@@ -891,63 +716,15 @@ import Layout from '../layouts/Layout.astro';
     color: var(--muted-mahogany);
   }
 
-  /* ==========================================
-     MOBILE OPTIMIZATION
-     ========================================== */
-@media (max-width: 768px) {
-    /* 1. Reset Global Horizontal Overflow */
+  @media (max-width: 768px) {
     body, html, .page-wrapper {
       overflow-x: hidden !important;
       width: 100% !important;
       max-width: 100vw !important;
     }
 
-    /* Offset fix for taller stacked mobile header */
-    section, footer {
-      scroll-margin-top: 115px; 
-    }
+    section, footer { scroll-margin-top: 115px; }
 
-    /* 2. Header - Forced Single Line Navigation */
-    .site-nav-header {
-      padding: 1rem 0.5rem !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 1rem !important;
-      box-sizing: border-box !important;
-    }
-
-    .nav-brand {
-      align-items: center !important;
-      text-align: center !important;
-    }
-
-    .nav-brand .brand-title {
-      font-size: 1.15rem !important;
-      letter-spacing: 0.1em !important;
-    }
-
-    .nav-brand .brand-subtitle {
-      font-size: 0.55rem !important;
-      letter-spacing: 0.15em !important;
-      margin-top: 0.3rem !important;
-    }
-
-    .nav-links {
-      display: flex !important;
-      flex-wrap: nowrap !important;
-      justify-content: center !important;
-      gap: 0.75rem !important;
-      width: 100% !important;
-    }
-
-    .nav-links a {
-      font-size: 0.65rem !important;
-      letter-spacing: 0.1em !important;
-      padding: 0 !important;
-      white-space: nowrap !important;
-    }
-
-    /* 3. Top Hero Section */
     .first-photo-fullwidth {
       margin-top: 130px !important;
       margin-bottom: 0 !important;
@@ -974,7 +751,6 @@ import Layout from '../layouts/Layout.astro';
       height: 0 !important;
     }
 
-    /* 4. UNIFIED SECTION TITLES */
     .vertical-layout .content-side h2,
     .desktop-full-title,
     .services-section .text-container.centered h2,
@@ -991,7 +767,6 @@ import Layout from '../layouts/Layout.astro';
       width: 100% !important;
     }
 
-    /* 5. Mobile Side-by-Side 55%/40% Reversion for Split Sections */
     .image-break {
       padding: 0 1rem !important;
       margin: 0 !important;
@@ -1027,9 +802,7 @@ import Layout from '../layouts/Layout.astro';
       display: block !important;
     }
 
-    .vertical-layout .content-side {
-      display: contents !important;
-    }
+    .vertical-layout .content-side { display: contents !important; }
 
     .vertical-layout .body-text {
       grid-column: 2 !important;
@@ -1042,14 +815,9 @@ import Layout from '../layouts/Layout.astro';
       overflow-wrap: normal !important;
     }
 
-    .vertical-layout .body-text:first-of-type {
-      margin-top: 0 !important;
-    }
+    .vertical-layout .body-text:first-of-type { margin-top: 0 !important; }
 
-    /* Packages Specific Layout Override for Mobile Intro Text & List Position */
-    #packages.vertical-layout .desktop-full-title {
-      grid-row: 1 !important;
-    }
+    #packages.vertical-layout .desktop-full-title { grid-row: 1 !important; }
 
     #packages.vertical-layout .packages-intro {
       grid-column: 1 / -1 !important;
@@ -1057,12 +825,12 @@ import Layout from '../layouts/Layout.astro';
       text-align: center !important;
       margin-bottom: 2rem !important;
       padding: 0 1rem !important;
-      text-wrap: balance !important; /* Perfect block balancing for mobile text */
+      text-wrap: balance !important;
     }
 
     #packages.vertical-layout .image-wrapper {
       grid-row: 3 / 10 !important;
-      align-self: center !important; /* Automatically perfectly centers it vertically alongside the text */
+      align-self: center !important;
       margin-top: 0 !important;
     }
 
@@ -1075,21 +843,9 @@ import Layout from '../layouts/Layout.astro';
       flex-direction: column !important;
     }
 
-    .package-item h3 {
-      font-size: 0.85rem !important;
-      margin-bottom: 0.2rem !important;
-    }
-
-    .package-item li {
-      font-size: 0.7rem !important;
-      line-height: 1.25 !important;
-      margin-bottom: 0.2rem !important;
-      padding-left: 0.6rem !important;
-    }
-
-    .package-item li::before {
-      content: "-";
-    }
+    .package-item h3 { font-size: 0.85rem !important; margin-bottom: 0.2rem !important; }
+    .package-item li { font-size: 0.7rem !important; line-height: 1.25 !important; margin-bottom: 0.2rem !important; padding-left: 0.6rem !important; }
+    .package-item li::before { content: "-"; }
 
     .vertical-layout .full-width-divider {
       grid-column: 1 / -1 !important;
@@ -1106,7 +862,6 @@ import Layout from '../layouts/Layout.astro';
       height: 0 !important;
     }
 
-    /* 6. Video Break - MOBILE FIX */
     .video-break {
       width: 100vw !important;
       position: relative !important;
@@ -1116,145 +871,40 @@ import Layout from '../layouts/Layout.astro';
       margin-right: -50vw !important;
       margin-top: 0 !important;
       margin-bottom: 1.5rem !important; 
-      padding-bottom: 0 !important; /* FIXED: Removed padding */
+      padding-bottom: 0 !important; 
       border-bottom: 1px solid var(--border-mahogany) !important;
       display: block !important; 
     }
     
-    .desktop-video {
-      display: none !important; 
-    }
+    .desktop-video { display: none !important; }
+    .mobile-video { display: block !important; width: 100% !important; height: auto !important; aspect-ratio: 9 / 16 !important; margin: 0 !important; padding: 0 !important; }
 
-    .mobile-video {
-      display: block !important; 
-      width: 100% !important; 
-      height: auto !important; 
-      aspect-ratio: 9 / 16 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
+    .services-section { padding: 0 1rem 1.5rem 1rem !important; border-top: none !important; }
+    .services-section .text-container.centered .subtitle { font-size: 0.8rem !important; line-height: 1.4 !important; margin-top: 0 !important; }
+    .services-grid-2x4 { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 0.75rem !important; margin-top: 1.5rem !important; }
+    .service-tile { height: 200px !important; }
+    .tile-overlay { padding: 0.75rem !important; }
+    .tile-overlay h3 { font-size: 0.95rem !important; letter-spacing: 0.05em !important; }
+    .tile-description { font-size: 0.65rem !important; line-height: 1.3 !important; margin-top: 0.25rem !important; opacity: 1 !important; transform: translateY(0) !important; }
 
-    /* 7. Services Grid */
-    .services-section {
-      padding: 0 1rem 1.5rem 1rem !important;
-      border-top: none !important; 
-    }
-
-    .services-section .text-container.centered .subtitle {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-top: 0 !important;
-    }
-
-    .services-grid-2x4 {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 0.75rem !important;
-      margin-top: 1.5rem !important;
-    }
-
-    .service-tile {
-      height: 200px !important;
-    }
-
-    .tile-overlay {
-      padding: 0.75rem !important;
-    }
-
-    .tile-overlay h3 {
-      font-size: 0.95rem !important;
-      letter-spacing: 0.05em !important;
-    }
-
-    .tile-description {
-      font-size: 0.65rem !important;
-      line-height: 1.3 !important;
-      margin-top: 0.25rem !important;
-      opacity: 1 !important; 
-      transform: translateY(0) !important;
-    }
-
-    /* 8. Portfolio Carousel */
-    .portfolio-carousel-section {
-      padding: 1.5rem 0 2rem 0 !important;
-    }
-
-    .portfolio-carousel-section .text-container.centered {
-      padding: 0 1rem !important; 
-    }
-
-    .portfolio-carousel-section .text-container.centered .subtitle {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-top: 0 !important;
-    }
-
-    .carousel-container {
-      margin-top: 1.5rem !important;
-    }
-
-    .carousel-track-wrapper {
-      padding: 0 !important; 
-    }
-
-    .carousel-slide {
-      padding: 0 0.5rem !important;
-    }
-
-    .carousel-slide img,
-    .carousel-slide picture img {
-      width: 100% !important;
-      height: auto !important;
-      aspect-ratio: 4 / 5 !important;
-      object-fit: cover !important;
-    }
-
-    .carousel-arrow {
-      width: 32px !important;
-      height: 32px !important;
-      font-size: 1rem !important;
-    }
-
+    .portfolio-carousel-section { padding: 1.5rem 0 2rem 0 !important; }
+    .portfolio-carousel-section .text-container.centered { padding: 0 1rem !important; }
+    .portfolio-carousel-section .text-container.centered .subtitle { font-size: 0.8rem !important; line-height: 1.4 !important; margin-top: 0 !important; }
+    .carousel-container { margin-top: 1.5rem !important; }
+    .carousel-track-wrapper { padding: 0 !important; }
+    .carousel-slide { padding: 0 0.5rem !important; }
+    .carousel-slide img, .carousel-slide picture img { width: 100% !important; height: auto !important; aspect-ratio: 4 / 5 !important; object-fit: cover !important; }
+    .carousel-arrow { width: 32px !important; height: 32px !important; font-size: 1rem !important; }
     .prev-arrow { left: 0.75rem !important; }
     .next-arrow { right: 0.75rem !important; }
 
-    /* 9. Footer / Contact */
-    .footer-section {
-      padding: 2.5rem 1rem 3rem 1rem !important; 
-    }
-
-    .footer-section .text-container.centered .subtitle {
-      font-size: 0.8rem !important;
-      line-height: 1.4 !important;
-      margin-top: 0 !important;
-      margin-bottom: 1.5rem !important;
-    }
-
-    .contact-details {
-      margin-top: 1rem !important;
-      margin-bottom: 1.5rem !important;
-    }
-
-    .contact-email {
-      font-size: 1.1rem !important;
-      margin-bottom: 0.25rem !important;
-    }
-
-    .luxury-form {
-      gap: 1rem !important; 
-      margin-bottom: 2rem !important;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .submit-btn {
-      padding: 1rem !important; 
-      font-size: 0.9rem !important; 
-    }
-
-    .copyright {
-      font-size: 0.65rem !important;
-    }
+    .footer-section { padding: 2.5rem 1rem 3rem 1rem !important; }
+    .footer-section .text-container.centered .subtitle { font-size: 0.8rem !important; line-height: 1.4 !important; margin-top: 0 !important; margin-bottom: 1.5rem !important; }
+    .contact-details { margin-top: 1rem !important; margin-bottom: 1.5rem !important; }
+    .contact-email { font-size: 1.1rem !important; margin-bottom: 0.25rem !important; }
+    .luxury-form { gap: 1rem !important; margin-bottom: 2rem !important; }
+    .form-group input, .form-group textarea, .submit-btn { padding: 1rem !important; font-size: 0.9rem !important; }
+    .copyright { font-size: 0.65rem !important; }
   }
 </style>
 
@@ -1271,9 +921,7 @@ import Layout from '../layouts/Layout.astro';
 
     if (slides.length <= 1) return;
 
-    if (heroSliderTimer) {
-      clearInterval(heroSliderTimer);
-    }
+    if (heroSliderTimer) clearInterval(heroSliderTimer);
 
     heroSliderTimer = setInterval(() => {
       slides[currentIndex].classList.remove('active');
@@ -1311,18 +959,12 @@ import Layout from '../layouts/Layout.astro';
     let isTransitioning = false;
 
     function updateSlidePosition(smooth = true) {
-      if (smooth) {
-        track.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-      } else {
-        track.style.transition = 'none';
-      }
+      if (smooth) track.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+      else track.style.transition = 'none';
 
       slides.forEach((slide, idx) => {
-        if (idx === currentIndex) {
-          slide.classList.add('active');
-        } else {
-          slide.classList.remove('active');
-        }
+        if (idx === currentIndex) slide.classList.add('active');
+        else slide.classList.remove('active');
       });
 
       const slideWidth = slides[0].offsetWidth;
@@ -1349,13 +991,8 @@ import Layout from '../layouts/Layout.astro';
       
       if (slides[currentIndex] === firstClone || slides[currentIndex] === lastClone) {
         slides.forEach(s => s.style.transition = 'none');
-        
-        if (slides[currentIndex] === firstClone) {
-          currentIndex = 1; 
-        } else if (slides[currentIndex] === lastClone) {
-          currentIndex = slides.length - 2; 
-        }
-        
+        if (slides[currentIndex] === firstClone) currentIndex = 1; 
+        else if (slides[currentIndex] === lastClone) currentIndex = slides.length - 2; 
         updateSlidePosition(false);
         track.offsetHeight; 
         slides.forEach(s => s.style.transition = '');
@@ -1365,34 +1002,19 @@ import Layout from '../layouts/Layout.astro';
     if (nextBtn) {
       const newNextBtn = nextBtn.cloneNode(true);
       nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
-      newNextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetTimer();
-      });
+      newNextBtn.addEventListener('click', () => { nextSlide(); resetTimer(); });
     }
 
     if (prevBtn) {
       const newPrevBtn = prevBtn.cloneNode(true);
       prevBtn.parentNode.replaceChild(newPrevBtn, prevBtn);
-      newPrevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetTimer();
-      });
+      newPrevBtn.addEventListener('click', () => { prevSlide(); resetTimer(); });
     }
 
-    function startTimer() {
-      portfolioCarouselTimer = setInterval(nextSlide, 2000);
-    }
+    function startTimer() { portfolioCarouselTimer = setInterval(nextSlide, 2000); }
+    function resetTimer() { clearInterval(portfolioCarouselTimer); startTimer(); }
 
-    function resetTimer() {
-      clearInterval(portfolioCarouselTimer);
-      startTimer();
-    }
-
-    if (portfolioCarouselTimer) {
-      clearInterval(portfolioCarouselTimer);
-    }
-
+    if (portfolioCarouselTimer) clearInterval(portfolioCarouselTimer);
     startTimer();
     
     window.addEventListener('resize', () => {

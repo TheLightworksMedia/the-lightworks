@@ -1,37 +1,321 @@
+---
+interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
+    canonicalURL?: string;
+    type?: string;
+}
+
+const { 
+    title = "Real Estate Photographer & Architectural Media Bristol | The Lightworks",
+    description = "Premium real estate photography, architectural media, property videography, and drone services in Bristol, Bath, and the South West. Elevate your property listings with The Lightworks.",
+    image = "https://www.thelightworks.art/images/Preview/Preview_1200p_001.jpg",
+    canonicalURL = Astro.url.href,
+    type = "website"
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
         
-        <title>The Lightworks</title>
-        <meta name="description" content="Premium architectural and real estate media. We present every space with clarity and style." />
+        <!-- Google Fonts (Crucial for the typography) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
         
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.thelightworks.art/" />
-        <meta property="og:title" content="The Lightworks | Editorial Portfolio" />
-        <meta property="og:description" content="Premium architectural and real estate media. We present every space with clarity and style." />
-        <meta property="og:image" content="https://www.thelightworks.art/images/Preview/Preview_1200p_001.jpg" />
+        <!-- PRIMARY SEO -->
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content="Real Estate Photographer Bristol, Architectural Photography South West, Property Videography, Drone Photography Bristol, Estate Agent Marketing, Interior Photography" />
+        <meta name="author" content="The Lightworks" />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <link rel="canonical" href={canonicalURL} />
         
+        <!-- OPEN GRAPH / FACEBOOK -->
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={image} />
+        <meta property="og:site_name" content="The Lightworks" />
+        <meta property="og:locale" content="en_GB" />
+        
+        <!-- TWITTER -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.thelightworks.art/" />
-        <meta name="twitter:title" content="The Lightworks | Editorial Portfolio" />
-        <meta name="twitter:description" content="Premium architectural and real estate media. We present every space with clarity and style." />
-        <meta name="twitter:image" content="https://www.thelightworks.art/images/Preview/Preview_1200p_001.jpg" />
+        <meta name="twitter:url" content={canonicalURL} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={image} />
+
+        <!-- GOOGLE LOCAL BUSINESS SCHEMA -->
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "PhotographyService",
+              "name": "The Lightworks",
+              "image": "https://www.thelightworks.art/images/Preview/Preview_1200p_001.jpg",
+              "description": "Premium real estate photography, architectural media, videography, and drone services in Bristol and the South West.",
+              "url": "https://www.thelightworks.art/",
+              "telephone": "+447376940650",
+              "email": "enquiries@thelightworks.art",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Bristol",
+                "addressRegion": "South West",
+                "addressCountry": "UK"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "51.4545",
+                "longitude": "-2.5879"
+              },
+              "areaServed": [
+                "Bristol",
+                "Bath",
+                "South West England",
+                "Gloucestershire",
+                "Somerset"
+              ],
+              "priceRange": "£££"
+            }
+        </script>
     </head>
     <body>
+        <!-- UNIVERSAL SITE HEADER -->
+        <header class="site-nav-header">
+          <div class="nav-brand">
+            <span class="brand-title">THE LIGHTWORKS</span>
+            <span class="brand-subtitle">ARCHITECTURAL & REAL ESTATE MEDIA</span>
+          </div>
+          <nav class="nav-links">
+            <a href="/">HOME</a>
+            <a href="/#about">ABOUT</a>
+            
+            <div class="nav-dropdown">
+              <!-- Services link will turn bold on hover to indicate clickability -->
+              <a href="/#services" class="dropdown-toggle">SERVICES</a>
+              <div class="dropdown-menu">
+                <a href="/photography">PHOTOGRAPHY</a>
+                <a href="/videography">VIDEOGRAPHY</a>
+                <a href="/drone-media">DRONE MEDIA</a>
+                <a href="/floorplans">FLOORPLANS</a>
+                <a href="/360-tours">360 TOURS</a>
+                <a href="/social-media">SOCIAL MEDIA</a>
+                <a href="/short-term-rentals">SHORT-TERM RENTALS</a>
+                <a href="/commercial-spaces">COMMERCIAL SPACES</a>
+              </div>
+            </div>
+
+            <a href="/#packages">PACKAGES</a>
+            <a href="/#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+          </nav>
+        </header>
+
+        <!-- PAGE CONTENT INJECTS HERE -->
         <slot />
     </body>
 </html>
 
-<style>
-    html,
-    body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
+<style is:global>
+  :root {
+    --bg-cream: #F9F6F0;
+    --text-mahogany: #241A16;
+    --muted-mahogany: #63524A;
+    --border-mahogany: rgba(36, 26, 22, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-cream) !important;
+  }
+
+  body {
+    background-color: var(--bg-cream) !important;
+    color: var(--text-mahogany) !important;
+    font-family: 'Cormorant Garamond', serif !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* --- GLOBAL HEADER CSS --- */
+  .site-nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 4rem;
+    background-color: var(--bg-cream);
+    border-bottom: 1px solid var(--border-mahogany);
+    box-sizing: border-box;
+  }
+
+  .nav-brand {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-mahogany);
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted-mahogany);
+    margin-top: 0.35rem;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--text-mahogany);
+    text-decoration: none;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    opacity: 0.6;
+  }
+
+  /* --- DROPDOWN MENU STYLES --- */
+  .nav-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-toggle {
+    transition: font-weight 0.1s ease, opacity 0.3s ease !important;
+  }
+
+  /* When hovering over the dropdown area, make 'SERVICES' bold and fully opaque */
+  .nav-dropdown:hover .dropdown-toggle {
+    font-weight: 600;
+    opacity: 1;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    /* Pushed significantly lower to create clear visual separation */
+    top: calc(100% + 28.5px); 
+    left: 50%;
+    /* Starts slightly lower to allow for the smooth slide-up animation */
+    transform: translate(-50%, 15px);
+    background-color: var(--bg-cream);
+    border: 1px solid var(--border-mahogany);
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 30px rgba(36, 26, 22, 0.05);
+  }
+
+  /* The 'Invisible Bridge' stretched to easily cover the new 40px gap */
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -50px; 
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+  }
+
+  .nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    /* Rests precisely at the new lower position */
+    transform: translate(-50%, 0);
+  }
+
+  .dropdown-menu a {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: var(--text-mahogany);
+    color: var(--bg-cream);
+    opacity: 1;
+  }
+
+  /* --- MOBILE HEADER OVERRIDES --- */
+  @media (max-width: 768px) {
+    .site-nav-header {
+      padding: 1rem 0.5rem !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 1rem !important;
     }
+
+    .nav-brand {
+      align-items: center !important;
+      text-align: center !important;
+    }
+
+    .nav-brand .brand-title {
+      font-size: 1.15rem !important;
+    }
+
+    .nav-brand .brand-subtitle {
+      font-size: 0.55rem !important;
+      margin-top: 0.3rem !important;
+    }
+
+    .nav-links {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: center !important;
+      gap: 0.75rem !important;
+      width: 100% !important;
+    }
+
+    .nav-links a {
+      font-size: 0.65rem !important;
+      padding: 0 !important;
+      white-space: nowrap !important;
+    }
+
+    .dropdown-menu {
+      display: none !important;
+    }
+  }
 </style>
